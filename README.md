@@ -10,7 +10,7 @@ Unicode characters doesn't work when run as JAR.
 Clone directly in IntelliJ from GitHub:
 
 1. In IntelliJ, login into GitHub from file -> Settings -> Search for: github
-2. Version control: Alt + `  
+2. Version control: https://www.jetbrains.com/help/idea/enabling-version-control.html  
 3. Clone: VCS -> git -> clone
 4. Now SDK/JDK will need to be set and a launch configuration as an application with tanake as its main class.
 
