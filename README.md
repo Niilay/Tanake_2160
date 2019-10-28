@@ -15,7 +15,7 @@ Clone directly in IntelliJ from GitHub:
 
 3. Clone: VCS -> git -> clone
 
-4. Now SDK/JDK will need to be set and a launch configuration as an application with tanake as its main class.
+4. Now SDK/JDK will need to be set and a launch configuration as an application with tanake as its main class and module.
 https://www.jetbrains.com/help/idea/creating-and-editing-run-debug-configurations.html
 
 # Has:
