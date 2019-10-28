@@ -92,7 +92,6 @@ public class story {
                 while (acceptQuest) {
                 String input = scanner.nextLine();
 
-
                     if (input.equals("1")) {
                         System.out.println("You take a taxi to the shop..");
                         scanner.nextLine();
