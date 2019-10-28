@@ -161,8 +161,16 @@ public class bossAttack {
 
                         // If you die.
                         if (health < 1) {
-                            System.out.println("\t\t\nYou are terminated!");
-                            break;
+                            System.out.println("\n" +
+                                    "   ___  ___  ___  _   _  _  _  _   _   ___  ___  __  ||\n" +
+                                    "  |_ _|| __|| o \\| \\_/ || || \\| | / \\ |_ _|| __||  \\ L|\n" +
+                                    "   | | | _| |   /| \\_/ || || \\\\ || o | | | | _| | o )  \n" +
+                                    "   |_| |___||_|\\\\|_| |_||_||_|\\_||_n_| |_| |___||__/ ()\n");
+
+                            System.out.println("\t\t    Press [Enter] to start new game");
+                            scanner.nextLine();
+                            story goToStory = new story();
+                            goToStory.storyLine();
 
                             // If the enemy dies.
                         } else if (enemyHealth < 1) {
@@ -242,8 +250,18 @@ public class bossAttack {
                         }
 
                         // If you die.
+                        // If you die.
                         if (health < 1) {
-                            System.out.println("\t\t\nYou are terminated!");
+                            System.out.println("\n" +
+                                    "   ___  ___  ___  _   _  _  _  _   _   ___  ___  __  ||\n" +
+                                    "  |_ _|| __|| o \\| \\_/ || || \\| | / \\ |_ _|| __||  \\ L|\n" +
+                                    "   | | | _| |   /| \\_/ || || \\\\ || o | | | | _| | o )  \n" +
+                                    "   |_| |___||_|\\\\|_| |_||_||_|\\_||_n_| |_| |___||__/ ()\n");
+
+                            System.out.println("\t\t    Press [Enter] to start new game");
+                            scanner.nextLine();
+                            story goToStory = new story();
+                            goToStory.storyLine();
 
 
                             // If the enemy dies.
