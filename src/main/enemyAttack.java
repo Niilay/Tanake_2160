@@ -146,10 +146,9 @@ public class enemyAttack {
                                     " ___  ___  ___  _   _  _  _  _   _   ___  ___  __  ||\n" +
                                     "|_ _|| __|| o \\| \\_/ || || \\| | / \\ |_ _|| __||  \\ L|\n" +
                                     " | | | _| |   /| \\_/ || || \\\\ || o | | | | _| | o )  \n" +
-                                    " |_| |___||_|\\\\|_| |_||_||_|\\_||_n_| |_| |___||__/ ()\n" +
-                                    "                                                     \n");
+                                    " |_| |___||_|\\\\|_| |_||_||_|\\_||_n_| |_| |___||__/ ()\n");
 
-                            System.out.println("Press [Enter] to start new game");
+                            System.out.println("\t\t  Press [Enter] to start new game");
                             scanner.nextLine();
                             story goToStory = new story();
                             goToStory.storyLine();
@@ -240,10 +239,9 @@ public class enemyAttack {
                                     " ___  ___  ___  _   _  _  _  _   _   ___  ___  __  ||\n" +
                                     "|_ _|| __|| o \\| \\_/ || || \\| | / \\ |_ _|| __||  \\ L|\n" +
                                     " | | | _| |   /| \\_/ || || \\\\ || o | | | | _| | o )  \n" +
-                                    " |_| |___||_|\\\\|_| |_||_||_|\\_||_n_| |_| |___||__/ ()\n" +
-                                    "                                                     \n");
+                                    " |_| |___||_|\\\\|_| |_||_||_|\\_||_n_| |_| |___||__/ ()\n");
 
-                            System.out.println("Press [Enter] to start new game");
+                            System.out.println("\t\t  Press [Enter] to start new game");
                             scanner.nextLine();
                             story goToStory = new story();
                             goToStory.storyLine();
