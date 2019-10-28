@@ -55,8 +55,10 @@ public class story {
 
             case 1:
 
-                System.out.println("\nType your name:");
+                System.out.println("\nType a username:");
                 String name = scanner.next();
+                System.out.println("\nType a password:");
+                scanner.next();
 
                 System.out.println("\nTanake Virtual instance initiated...");
                 System.out.println("\nPress [Enter] to transfer to Agent");
