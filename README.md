@@ -1,7 +1,7 @@
 # Tanake 2160
 Cyberpunk themed text-based Micro-RPG
 
-Works with IntelliJ 2019.
+Works with *IntelliJ 2019*
 
 The project should be run with UTF-8 as file encoding for showing UTF-8 characters.
 
