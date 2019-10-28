@@ -10,7 +10,7 @@ public class story {
 
 
 
-        // Integers
+        // Integers (mostly for game restart)
         int startMoney = stats.getstartMoney();
         int health = stats.getHealth();
         int day = stats.getDay();
@@ -25,6 +25,7 @@ public class story {
         int enhancementLimbs = stats.getEnhancementLimbs();
 
 
+        // Game restart
         if (health < 1) {
             startMoney = 250;
             stats.setStartMoney(startMoney);
