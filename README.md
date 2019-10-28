@@ -5,6 +5,8 @@ Works in IntelliJ 2019 and Eclipse 2019.
 
 The project should be run with UTF-8 as file encoding for showing UTF-8 characters.
 
+Unicode characters doesn't work when run as JAR.
+
 # Has:
 
 - XP / Leveling 
