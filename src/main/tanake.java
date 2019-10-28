@@ -16,7 +16,7 @@ public class tanake {
                 " / /    / /_/ /  / / / // /_/ /  / ,<   /  __/        / __/  / /  / /_/ / / /_/ / \n" +
                 "/_/     \\__,_/  /_/ /_/ \\__,_/  /_/|_|  \\___/        /____/ /_/   \\____/  \\____/  \n" +
                 "                                                                                  ");
-        System.out.println("Cyberpunk Micro-RPG developed with " + unicodeMessageHP + "\nby Nicklas Pedersen\n");
+        System.out.println("lllllllllllllCyberpunk Micro-RPG developed with " + unicodeMessageHP + "\nby Nicklas Pedersen\n");
         System.out.println("Introduction:" +
                 "\nThe year is 2160. You are a rogue, freelance detective for hire in the virtual" +
                 "\ncity of Tanake. A corporate network filled with greed, hostility and crime. " +
