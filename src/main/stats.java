@@ -14,7 +14,6 @@ public class stats {
     }
 
 
-
     // Player.
     private static int health = 120;
     private static int startMoney = 250;
@@ -45,8 +44,6 @@ public class stats {
     }
 
 
-
-
     // Player weapon variables.
     private static int baseGunMinDamage = 10;
     private static int baseGunMaxDamage = 30;
@@ -55,7 +52,6 @@ public class stats {
 
 
     // Functions
-
     public static int getBaseGunMinDamage() {
         return baseGunMinDamage;
     }
@@ -80,8 +76,6 @@ public class stats {
     public static void setSpecialMaxDamage(int specialMaxDamage) {
         stats.specialMaxDamage = specialMaxDamage;
     }
-
-
 
 
     // Player inventory

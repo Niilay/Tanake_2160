@@ -3,11 +3,8 @@ import java.util.Scanner;
 public class story {
     public void storyLine () {
 
-        //
-
         // System
         Scanner scanner = new Scanner(System.in);
-
 
 
         // Integers (mostly for game restart)
@@ -184,7 +181,6 @@ public class story {
                     }
                 }
                 break;
-
 
             case 3:
                 System.out.println("This day happens if day = 3\n");
