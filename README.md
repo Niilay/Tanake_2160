@@ -7,7 +7,7 @@ The project should be run with UTF-8 as file encoding for showing UTF-8 characte
 
 Unicode characters doesn't work when run as JAR.
 
-[b]Clone directly in IntelliJ from GitHub:[/b]
+*Clone directly in IntelliJ from GitHub:*
 
 1. In IntelliJ, login into GitHub from file -> Settings -> Search for: github
 
