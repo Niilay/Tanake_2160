@@ -1,5 +1,4 @@
 // System imports
-
 import java.util.Scanner;
 
 public class tanake {

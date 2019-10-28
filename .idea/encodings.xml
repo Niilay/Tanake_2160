@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="NO_ENCODING">
-    <file url="file://$PROJECT_DIR$/src/main/bossAttack.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/casino.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/enemyAttack.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/home.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/shop.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/stats.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/story.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/tanake.java" charset="UTF-8" />
-    <file url="PROJECT" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src" charset="UTF-8" />
   </component>
 </project>
