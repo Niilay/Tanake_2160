@@ -17,7 +17,7 @@ public class tanake {
                 "/_/     \\__,_/  /_/ /_/ \\__,_/  /_/|_|  \\___/        /____/ /_/   \\____/  \\____/  \n" +
                 "                                                                                  ");
 
-        System.out.println("                       Press [Enter] to start new game");
+        System.out.println("                         Press [Enter] to start new game");
         scanner.nextLine();
         System.out.println("Cyberpunk Micro-RPG developed with " + unicodeMessageHP + "\nby Nicklas Pedersen\n");
         System.out.println("Introduction:" +
