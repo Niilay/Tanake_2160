@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Tanake 2160:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Tanake_2160_jar</output-path>
+    <root id="archive" name="Tanake 2160.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="Tanake 2160" />
+    </root>
+  </artifact>
+</component>
