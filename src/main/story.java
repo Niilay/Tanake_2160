@@ -3,12 +3,52 @@ import java.util.Scanner;
 public class story {
     public void storyLine () {
 
+        //
+
         // System
         Scanner scanner = new Scanner(System.in);
 
+
+
+        // Integers
+        int startMoney = stats.getstartMoney();
+        int health = stats.getHealth();
         int day = stats.getDay();
         int escapeAmount = stats.getEscapeAmount();
         int networkModule = stats.getNetworkModule();
+        int xP = stats.getXP();
+        int baseGunMinDamage = stats.getBaseGunMinDamage();
+        int baseGunMaxDamage = stats.getBaseGunMaxDamage();
+        int specialMinDamage = stats.getSpecialMinDamage();
+        int specialMaxDamage = stats.getSpecialMaxDamage();
+        int specialAmount = stats.getSpecialAmount();
+        int enhancementLimbs = stats.getEnhancementLimbs();
+
+
+        if (health < 1) {
+            startMoney = 250;
+            stats.setStartMoney(startMoney);
+            health = 120;
+            stats.setHealth(health);
+            day = 1;
+            stats.setDay(day);
+            xP = 0;
+            stats.setXP(xP);
+            networkModule = 0;
+            stats.setNetworkModule(networkModule);
+            baseGunMinDamage = 10;
+            stats.setBaseGunMinDamage(baseGunMinDamage);
+            baseGunMaxDamage = 30;
+            stats.setBaseGunMaxDamage(baseGunMaxDamage);
+            specialMinDamage = 30;
+            stats.setSpecialMinDamage(specialMinDamage);
+            specialMaxDamage = 70;
+            stats.setSpecialMaxDamage(specialMaxDamage);
+            specialAmount = 1;
+            stats.setSpecialAmount(specialAmount);
+            enhancementLimbs = 2;
+            stats.setEnhancementLimbs(enhancementLimbs);
+        }
 
         // Storyline
         switch (day) {
