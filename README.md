@@ -12,6 +12,7 @@ Clone directly in IntelliJ from GitHub:
 1. In IntelliJ, login into GitHub from file -> Settings -> Search for: github
 2. Version control: Alt + `  
 3. Clone: VCS -> git -> clone
+4. Now SDK will need to be set and a launch configuration as well. 
 
 # Has:
 
