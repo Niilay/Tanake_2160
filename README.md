@@ -11,6 +11,7 @@ The project should be run with UTF-8 as file encoding for showing UTF-8 characte
 - Combat 
 - Shop
 - Casino
+- Story
 
 # Story:
 The year is 2160. You are a rogue, freelance detective for hire in the virtual
