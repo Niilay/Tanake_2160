@@ -84,7 +84,6 @@ public class enemyAttack {
         String unicodeXp = "\uD83D\uDCDA";
 
 
-
         boolean enemyFight = true;
         while (enemyFight) {
 
