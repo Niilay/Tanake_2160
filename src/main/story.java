@@ -46,6 +46,8 @@ public class story {
             stats.setSpecialAmount(specialAmount);
             enhancementLimbs = 2;
             stats.setEnhancementLimbs(enhancementLimbs);
+            escapeAmount = 1;
+            stats.setEscapeAmount(escapeAmount);
         }
 
         // Storyline
