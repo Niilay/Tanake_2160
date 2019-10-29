@@ -1,11 +1,22 @@
 # Tanake 2160
 Cyberpunk themed text-based Micro-RPG
 
-Works in IntelliJ 2019 and Eclipse 2019.
+Works with *IntelliJ 2019*
 
 The project should be run with UTF-8 as file encoding for showing UTF-8 characters.
 
 Unicode characters doesn't work when run as JAR.
+
+**Clone directly in IntelliJ from GitHub:**
+
+1. In IntelliJ, login into GitHub from file -> Settings -> Search for: github
+
+2. Version control: https://www.jetbrains.com/help/idea/enabling-version-control.html  
+
+3. Clone: VCS -> git -> clone
+
+4. Now SDK/JDK will need to be set and a launch configuration as an application with tanake as its main class and module.
+https://www.jetbrains.com/help/idea/creating-and-editing-run-debug-configurations.html
 
 # Has:
 
