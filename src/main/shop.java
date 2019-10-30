@@ -306,7 +306,7 @@ public class shop {
             }
 
 
-            // Iris-zoom
+            // Iris Slow-Motion
             if (shopinput.equals("6")) {
 
                 // If you have enough cash and have not reached maximum inventory value
