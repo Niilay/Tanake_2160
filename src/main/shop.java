@@ -35,8 +35,8 @@ public class shop {
         // Rare inventory variables
         int scopeUpgrade = stats.getScopeUpgrade();
         int specialUpgrade = stats.getSpecialUpgrade();
-        int eyeZoomUpgrade = 4000;
-        int slowMotionUpgrade = 10000;
+        int eyeZoomUpgrade = stats.getIrisZoomUpgrade();
+        int slowMotionUpgrade = stats.getIrisSlowUpgrade();
 
         // Rare inventory upgrade values
         // Advanced scope
@@ -47,6 +47,16 @@ public class shop {
         // Special Upgrade
         int upgradeMinSpecial = 6;
         int upgradeMaxSpecial = 10;
+        // Iris-zoom Upgrade
+        int irisMinBase = 4;
+        int irisMaxBase = 6;
+        int irisMinSpecial = 8;
+        int irisMaxSpecial = 12;
+        // Iris Slow-motion Upgrade
+        int irisSlowMinBase = 8;
+        int irisSlowMaxBase = 12;
+        int irisSlowMinSpecial = 16;
+        int irisSlowMaxSpecial = 24;
 
         // Weapon variables
         int baseGunMinDamage = stats.getBaseGunMinDamage();
@@ -246,6 +256,96 @@ public class shop {
                 } else if (startMoney < specialUpgradeValue) {
                     System.out.println("----------------------------------------");
                     System.out.println("You do not have enough cash!\nCurrent cash: " + startMoney + "$\n" + "Special Attack Upgrade price: " + specialUpgradeValue + "$");
+                    System.out.println("----------------------------------------");
+                }
+            }
+
+
+            // Iris-zoom
+            if (shopinput.equals("5")) {
+
+                // If you have enough cash and have not reached maximum inventory value
+                if (startMoney >= eyeZoomUpgrade2Value) {
+
+                    if (eyeZoomUpgrade < 1) {
+                        startMoney -= eyeZoomUpgrade2Value;
+
+                        eyeZoomUpgrade++;
+                        baseGunMinDamage += irisMinBase;
+                        baseGunMaxDamage += irisMaxBase;
+                        specialMinDamage += irisMinSpecial;
+                        specialMaxDamage += irisMaxSpecial;
+
+                        stats.setStartMoney(startMoney);
+                        stats.setIrisZoomUpgrade(eyeZoomUpgrade);
+                        stats.setBaseGunMinDamage(baseGunMinDamage);
+                        stats.setBaseGunMaxDamage(baseGunMaxDamage);
+                        stats.setSpecialMinDamage(specialMinDamage);
+                        stats.setSpecialMaxDamage(specialMaxDamage);
+
+                        System.out.println("----------------------------------------");
+                        System.out.println("Receipt:\nYou bought a Iris-Zoom Upgrade: " + eyeZoomUpgrade2Value + "$ " + "\nYou have: " + eyeZoomUpgrade + "\nCash after purchase: " + startMoney + "$");
+                        System.out.println("Your damage is now: " + "[" + baseGunMinDamage + " - " + baseGunMaxDamage + "]" + "\nYour special attack is: " + "[" + specialMinDamage + " - " + specialMaxDamage + "]");
+                        System.out.println("----------------------------------------");
+
+                    }
+
+                    // If maximum in inventory is reached
+                    else if (specialUpgrade > 0) {
+                        System.out.println("-------------------------------------------------");
+                        System.out.println("You already have a Iris-Zoom Upgrade!" + "\nMaximum: " + eyeZoomUpgrade);
+                        System.out.println("-------------------------------------------------");
+                    }
+
+                    // If you do not have enough cash for the item
+                } else if (startMoney < eyeZoomUpgrade2Value) {
+                    System.out.println("----------------------------------------");
+                    System.out.println("You do not have enough cash!\nCurrent cash: " + startMoney + "$\n" + "Iris-Zoom price: " + eyeZoomUpgrade2Value + "$");
+                    System.out.println("----------------------------------------");
+                }
+            }
+
+
+            // Iris-zoom
+            if (shopinput.equals("6")) {
+
+                // If you have enough cash and have not reached maximum inventory value
+                if (startMoney >= slowMotionUpgrade3Value) {
+
+                    if (slowMotionUpgrade < 1) {
+                        startMoney -= slowMotionUpgrade3Value;
+
+                        slowMotionUpgrade++;
+                        baseGunMinDamage += irisSlowMinBase;
+                        baseGunMaxDamage += irisSlowMaxBase;
+                        specialMinDamage += irisSlowMinSpecial;
+                        specialMaxDamage += irisSlowMaxSpecial;
+
+                        stats.setStartMoney(startMoney);
+                        stats.setIrisSlowUpgrade(slowMotionUpgrade);
+                        stats.setBaseGunMinDamage(baseGunMinDamage);
+                        stats.setBaseGunMaxDamage(baseGunMaxDamage);
+                        stats.setSpecialMinDamage(specialMinDamage);
+                        stats.setSpecialMaxDamage(specialMaxDamage);
+
+                        System.out.println("----------------------------------------");
+                        System.out.println("Receipt:\nYou bought a Iris Slow-Motion Upgrade: " + slowMotionUpgrade3Value + "$ " + "\nYou have: " + slowMotionUpgrade + "\nCash after purchase: " + startMoney + "$");
+                        System.out.println("Your damage is now: " + "[" + baseGunMinDamage + " - " + baseGunMaxDamage + "]" + "\nYour special attack is: " + "[" + specialMinDamage + " - " + specialMaxDamage + "]");
+                        System.out.println("----------------------------------------");
+
+                    }
+
+                    // If maximum in inventory is reached
+                    else if (slowMotionUpgrade > 0) {
+                        System.out.println("-------------------------------------------------");
+                        System.out.println("You already have a Iris Slow-Motion Upgrade!" + "\nMaximum: " + slowMotionUpgrade);
+                        System.out.println("-------------------------------------------------");
+                    }
+
+                    // If you do not have enough cash for the item
+                } else if (startMoney < slowMotionUpgrade3Value) {
+                    System.out.println("----------------------------------------");
+                    System.out.println("You do not have enough cash!\nCurrent cash: " + startMoney + "$\n" + "Iris Slow-Motion price: " + slowMotionUpgrade3Value + "$");
                     System.out.println("----------------------------------------");
                 }
             }

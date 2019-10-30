@@ -131,6 +131,8 @@ public class stats {
     // Rare inventory variables.
     private static int scopeUpgrade = 0;
     private static int specialUpgrade = 0;
+    private static int irisZoomUpgrade = 0;
+    private static int irisSlowUpgrade = 0;
 
     // Functions
     public static int getScopeUpgrade() { return scopeUpgrade; }
@@ -142,5 +144,14 @@ public class stats {
 
     public static void setSpecialUpgrade(int specialUpgrade) { stats.specialUpgrade = specialUpgrade; }
 
+
+    public static int getIrisZoomUpgrade() { return irisZoomUpgrade; }
+
+    public static void setIrisZoomUpgrade(int irisZoomUpgrade) { stats.irisZoomUpgrade = irisZoomUpgrade; }
+
+
+    public static int getIrisSlowUpgrade() { return irisSlowUpgrade; }
+
+    public static void setIrisSlowUpgrade(int irisSlowUpgrade) { stats.irisSlowUpgrade = irisSlowUpgrade; }
 
 }
