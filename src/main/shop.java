@@ -10,31 +10,47 @@ public class shop {
         Random rand = new Random();
         Scanner scanner = new Scanner(System.in);
 
+        // Player variables
         int day = stats.getDay();
-
         int health = stats.getHealth();
-        int homeHP = 10;
         int startMoney = stats.getstartMoney();
 
-        // Inventory variables.
+        // Inventory variables
         int specialAmount = stats.getSpecialAmount();
         int enhancementLimbs = stats.getEnhancementLimbs();
 
-        // Quest shop/inventory variables.
+        // Quest shop/inventory variables
         int networkModule = 0; // Storyline variable
         int bruteForcer = 0;
         int tazer = 0;
 
         // Shop price variables
-        int enhancementLimbShopValue = 125;
-        int specialAttackValue = 250;
-        int scopeUpgrade1Value = 500;
-        int specialUpgradeValue = 750;
-        int eyeZoomUpgrade2Value = 1000;
-        int slowMotionUpgrade3Value = 1500;
+        int enhancementLimbShopValue = 150;
+        int specialAttackValue = 300;
+        int scopeUpgrade1Value = 1000;
+        int specialUpgradeValue = 2000;
+        int eyeZoomUpgrade2Value = 4000;
+        int slowMotionUpgrade3Value = 10000;
 
+        // Rare inventory variables
+        int scopeUpgrade = stats.getScopeUpgrade();
+        int specialUpgrade = 2000;
+        int eyeZoomUpgrade = 4000;
+        int slowMotionUpgrade = 10000;
 
-        // Continue to shop or go home to replenish yourself.
+        // Rare inventory upgrade values
+        int scopeBase = 5;
+        int scopeBaseMax = 5;
+        int scopeMinSpecial = 3;
+        int scopeMaxSpecial = 3;
+
+        // Weapon variables
+        int baseGunMinDamage = stats.getBaseGunMinDamage();
+        int baseGunMaxDamage = stats.getBaseGunMaxDamage();
+        int specialMinDamage = stats.getSpecialMinDamage();
+        int specialMaxDamage = stats.getSpecialMaxDamage();
+
+        // Continue to shop or go home to replenish yourself
         System.out.println("You arrive at the shop..");
 
         // Shop system
@@ -148,11 +164,56 @@ public class shop {
                     System.out.println("----------------------------------------");
                 }
             }
+
+            // Special Refill.
+            if (shopinput.equals("3")) {
+
+                // If you have enough cash and have not reached maximum inventory value.
+                if (startMoney >= scopeUpgrade1Value) {
+
+                    if (scopeUpgrade < 1) {
+                        startMoney -= scopeUpgrade1Value;
+
+                        scopeUpgrade++;
+                        baseGunMinDamage += scopeBase;
+                        baseGunMaxDamage += scopeBaseMax;
+                        specialMinDamage += scopeMinSpecial;
+                        specialMaxDamage += scopeMaxSpecial;
+
+                        stats.setStartMoney(startMoney);
+                        stats.setScopeUpgrade(scopeUpgrade);
+                        stats.setBaseGunMinDamage(baseGunMinDamage);
+                        stats.setBaseGunMaxDamage(baseGunMaxDamage);
+                        stats.setSpecialMinDamage(specialMinDamage);
+                        stats.setSpecialMaxDamage(specialMaxDamage);
+
+                        System.out.println("----------------------------------------");
+                        System.out.println("Receipt:\nYou bought a Advanced Scope: " + scopeUpgrade1Value + "$ " + "\nYou have: " + scopeUpgrade + "\nCash after purchase: " + startMoney + "$");
+                        System.out.println("\nYour damage is now: " + "[" + baseGunMinDamage + " - " + baseGunMaxDamage + "]" + "\nYour special attack is: " + "[" + specialMinDamage + " - " + specialMaxDamage + "]");
+                        System.out.println("----------------------------------------");
+
+                    }
+
+                    // If maximum in inventory is reached.
+                    else if (scopeUpgrade > 1) {
+                        System.out.println("-------------------------------------------------");
+                        System.out.println("You already have a Advanced Scope!" + "\nCurrently: " + scopeUpgrade);
+                        System.out.println("-------------------------------------------------");
+                    }
+
+                    // If you do not have enough cash for the item.
+                } else if (startMoney < scopeUpgrade1Value) {
+                    System.out.println("----------------------------------------");
+                    System.out.println("You do not have enough cash!\nCurrent cash: " + startMoney + "$\n" + "Advanced Scope price: " + scopeUpgrade1Value + "$");
+                    System.out.println("----------------------------------------");
+                }
+            }
         }
 
         // If shop is exited the shop, it breaks to this class.
-            home gohome = new home();
-            gohome.homeMethod();
-        }
+        home gohome = new home();
+        gohome.homeMethod();
+
     }
+}
 

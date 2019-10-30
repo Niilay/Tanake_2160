@@ -125,4 +125,20 @@ public class stats {
     public static void setNetworkModule(int networkModule) {
         stats.networkModule = networkModule;
     }
+
+
+
+    // Rare inventory variables.
+    private static int scopeUpgrade = 0;
+
+    // Functions
+    public static int getScopeUpgrade() {
+        return scopeUpgrade;
+    }
+
+    public static void setScopeUpgrade(int scopeUpgrade) {
+        stats.scopeUpgrade = scopeUpgrade;
+    }
+
+
 }

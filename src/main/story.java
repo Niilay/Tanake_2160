@@ -173,6 +173,7 @@ public class story {
                             attack.boss();
 
                         } else if (input.equals("2")) {
+                            escapeAmount--;
                             System.out.println("\nYou choose to stay home..\n");
                             home gohome = new home();
                             gohome.homeMethod();
