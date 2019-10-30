@@ -39,10 +39,14 @@ public class shop {
         int slowMotionUpgrade = 10000;
 
         // Rare inventory upgrade values
+        // Advanced scope
         int scopeBase = 5;
         int scopeBaseMax = 5;
         int scopeMinSpecial = 3;
         int scopeMaxSpecial = 3;
+        // Special Upgrade
+        int upgradeMinSpecial = 3;
+        int upgradeMaxSpecial = 3;
 
         // Weapon variables
         int baseGunMinDamage = stats.getBaseGunMinDamage();
@@ -94,11 +98,11 @@ public class shop {
                 }
             }
 
-            // Enhancement limb.
+            // Enhancement limb
             if (shopinput.equals("1")) {
 
 
-                // If you have enough cash and have not reached maximum inventory value.
+                // If you have enough cash and have not reached maximum inventory value
                 if (startMoney >= enhancementLimbShopValue) {
 
                     if (enhancementLimbs < 4) {
@@ -112,14 +116,14 @@ public class shop {
                         System.out.println("----------------------------------------");
                     }
 
-                    // If maximum in inventory is reached.
+                    // If maximum in inventory is reached
                     else if (enhancementLimbs > 3) {
                         System.out.println("-------------------------------------------------");
                         System.out.println("You have the maximum number of enhancement limbs!" + "\nCurrently: " + enhancementLimbs);
                         System.out.println("-------------------------------------------------");
                     }
 
-                    // If you do not have enough cash for the item.
+                    // If you do not have enough cash for the item
                 } else if (startMoney < enhancementLimbShopValue) {
                     System.out.println("----------------------------------------");
                     System.out.println("You do not have enough cash!\nCurrent cash: " + startMoney + "$\n" + "Enhancement limb price: " + enhancementLimbShopValue + "$");
@@ -133,10 +137,10 @@ public class shop {
             }
 
 
-            // Special Refill.
+            // Special Refill
             if (shopinput.equals("2")) {
 
-                // If you have enough cash and have not reached maximum inventory value.
+                // If you have enough cash and have not reached maximum inventory value
                 if (startMoney >= specialAttackValue) {
 
                     if (specialAmount < 2) {
@@ -150,14 +154,14 @@ public class shop {
 
                     }
 
-                    // If maximum in inventory is reached.
+                    // If maximum in inventory is reached
                     else if (specialAmount > 1) {
                         System.out.println("-------------------------------------------------");
                         System.out.println("You have the maximum amount of special refills!" + "\nCurrently: " + specialAmount);
                         System.out.println("-------------------------------------------------");
                     }
 
-                    // If you do not have enough cash for the item.
+                    // If you do not have enough cash for the item
                 } else if (startMoney < specialAttackValue) {
                     System.out.println("----------------------------------------");
                     System.out.println("You do not have enough cash!\nCurrent cash: " + startMoney + "$\n" + "Special refill price: " + specialAttackValue + "$");
@@ -165,10 +169,11 @@ public class shop {
                 }
             }
 
-            // Special Refill.
+
+            // Advanced Scope
             if (shopinput.equals("3")) {
 
-                // If you have enough cash and have not reached maximum inventory value.
+                // If you have enough cash and have not reached maximum inventory value
                 if (startMoney >= scopeUpgrade1Value) {
 
                     if (scopeUpgrade < 1) {
@@ -194,23 +199,64 @@ public class shop {
 
                     }
 
-                    // If maximum in inventory is reached.
+                    // If maximum in inventory is reached
                     else if (scopeUpgrade > 1) {
                         System.out.println("-------------------------------------------------");
                         System.out.println("You already have a Advanced Scope!" + "\nCurrently: " + scopeUpgrade);
                         System.out.println("-------------------------------------------------");
                     }
 
-                    // If you do not have enough cash for the item.
+                    // If you do not have enough cash for the item
                 } else if (startMoney < scopeUpgrade1Value) {
                     System.out.println("----------------------------------------");
                     System.out.println("You do not have enough cash!\nCurrent cash: " + startMoney + "$\n" + "Advanced Scope price: " + scopeUpgrade1Value + "$");
                     System.out.println("----------------------------------------");
                 }
             }
+
+
+            // Special Upgrade
+            if (shopinput.equals("4")) {
+
+                // If you have enough cash and have not reached maximum inventory value
+                if (startMoney >= specialUpgradeValue) {
+
+                    if (specialUpgrade < 1) {
+                        startMoney -= specialUpgradeValue;
+
+                        specialUpgrade++;
+                        specialMinDamage += upgradeMinSpecial;
+                        specialMaxDamage += upgradeMaxSpecial;
+
+                        stats.setStartMoney(startMoney);
+                        stats.setSpecialUpgrade(specialUpgrade);
+                        stats.setSpecialMinDamage(specialMinDamage);
+                        stats.setSpecialMaxDamage(specialMaxDamage);
+
+                        System.out.println("----------------------------------------");
+                        System.out.println("Receipt:\nYou bought a Special Attack Upgrade: " + specialUpgradeValue + "$ " + "\nYou have: " + specialUpgrade + "\nCash after purchase: " + startMoney + "$");
+                        System.out.println("\nYour special attack is now: " + "[" + specialMinDamage + " - " + specialMaxDamage + "]");
+                        System.out.println("----------------------------------------");
+
+                    }
+
+                    // If maximum in inventory is reached
+                    else if (specialUpgrade > 1) {
+                        System.out.println("-------------------------------------------------");
+                        System.out.println("You already have a Special Attack Upgrade!" + "\nCurrently: " + specialUpgrade);
+                        System.out.println("-------------------------------------------------");
+                    }
+
+                    // If you do not have enough cash for the item
+                } else if (startMoney < specialUpgradeValue) {
+                    System.out.println("----------------------------------------");
+                    System.out.println("You do not have enough cash!\nCurrent cash: " + startMoney + "$\n" + "Special Attack Upgrade price: " + specialUpgradeValue + "$");
+                    System.out.println("----------------------------------------");
+                }
+            }
         }
 
-        // If shop is exited the shop, it breaks to this class.
+        // If shop is exited the shop, it breaks to this class
         home gohome = new home();
         gohome.homeMethod();
 
