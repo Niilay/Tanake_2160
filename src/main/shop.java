@@ -45,8 +45,8 @@ public class shop {
         int scopeMinSpecial = 3;
         int scopeMaxSpecial = 3;
         // Special Upgrade
-        int upgradeMinSpecial = 3;
-        int upgradeMaxSpecial = 3;
+        int upgradeMinSpecial = 6;
+        int upgradeMaxSpecial = 10;
 
         // Weapon variables
         int baseGunMinDamage = stats.getBaseGunMinDamage();
@@ -129,11 +129,6 @@ public class shop {
                     System.out.println("You do not have enough cash!\nCurrent cash: " + startMoney + "$\n" + "Enhancement limb price: " + enhancementLimbShopValue + "$");
                     System.out.println("----------------------------------------");
                 }
-
-            } else {
-                System.out.println("--------------");
-                System.out.println("Invalid input!");
-                System.out.println("--------------");
             }
 
 
@@ -194,15 +189,15 @@ public class shop {
 
                         System.out.println("----------------------------------------");
                         System.out.println("Receipt:\nYou bought a Advanced Scope: " + scopeUpgrade1Value + "$ " + "\nYou have: " + scopeUpgrade + "\nCash after purchase: " + startMoney + "$");
-                        System.out.println("\nYour damage is now: " + "[" + baseGunMinDamage + " - " + baseGunMaxDamage + "]" + "\nYour special attack is: " + "[" + specialMinDamage + " - " + specialMaxDamage + "]");
+                        System.out.println("Your damage is now: " + "[" + baseGunMinDamage + " - " + baseGunMaxDamage + "]" + "\nYour special attack is: " + "[" + specialMinDamage + " - " + specialMaxDamage + "]");
                         System.out.println("----------------------------------------");
 
                     }
 
                     // If maximum in inventory is reached
-                    else if (scopeUpgrade > 1) {
+                    else if (scopeUpgrade > 0) {
                         System.out.println("-------------------------------------------------");
-                        System.out.println("You already have a Advanced Scope!" + "\nCurrently: " + scopeUpgrade);
+                        System.out.println("You already have a Advanced Scope!" + "\nMaximum: " + scopeUpgrade);
                         System.out.println("-------------------------------------------------");
                     }
 
@@ -235,15 +230,15 @@ public class shop {
 
                         System.out.println("----------------------------------------");
                         System.out.println("Receipt:\nYou bought a Special Attack Upgrade: " + specialUpgradeValue + "$ " + "\nYou have: " + specialUpgrade + "\nCash after purchase: " + startMoney + "$");
-                        System.out.println("\nYour special attack is now: " + "[" + specialMinDamage + " - " + specialMaxDamage + "]");
+                        System.out.println("Your special attack is now: " + "[" + specialMinDamage + " - " + specialMaxDamage + "]");
                         System.out.println("----------------------------------------");
 
                     }
 
                     // If maximum in inventory is reached
-                    else if (specialUpgrade > 1) {
+                    else if (specialUpgrade > 0) {
                         System.out.println("-------------------------------------------------");
-                        System.out.println("You already have a Special Attack Upgrade!" + "\nCurrently: " + specialUpgrade);
+                        System.out.println("You already have a Special Attack Upgrade!" + "\nMaximum: " + specialUpgrade);
                         System.out.println("-------------------------------------------------");
                     }
 
