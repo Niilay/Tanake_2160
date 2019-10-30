@@ -34,7 +34,7 @@ public class shop {
 
         // Rare inventory variables
         int scopeUpgrade = stats.getScopeUpgrade();
-        int specialUpgrade = 2000;
+        int specialUpgrade = stats.getSpecialUpgrade();
         int eyeZoomUpgrade = 4000;
         int slowMotionUpgrade = 10000;
 
