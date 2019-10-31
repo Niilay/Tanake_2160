@@ -16,13 +16,12 @@ public class enemyAttack {
         // Enemy action variables.
         String[] actions = {"beating up homeless people!", "selling drugs!", "stealing from citizens!", "breaking into an apartment!", "pushing citizens around!", "being too drunk and harassing people!", "smoking Violet in public!", "being cruel to a dog!", "being high and nude in public!", "setting fire to random birds!", "blotting himself in public!", "robbing a liqueur store!", "drug dealing to kids!", "using counterfeited dollars at Blits & Chips!"};
 
+        // Environment
         int day = stats.getDay();
 
-        int xP = stats.getXP();
-        int maxXpCommon = 50;
-
-            // Player variables.
+        // Player variables.
         int health = stats.getHealth();
+        int xP = stats.getXP();
 
         // Weapon variables.
         int baseGunMinDamage = stats.getBaseGunMinDamage();
@@ -30,7 +29,9 @@ public class enemyAttack {
         int specialMinDamage = stats.getSpecialMinDamage();
         int specialMaxDamage = stats.getSpecialMaxDamage();
 
+        // Common enemy
         int maxCommonAttack = 24;
+        int maxXpCommon = 50;
 
         int startMoney = stats.getstartMoney();
         int moneyDropCommon = rand.nextInt(250) + 50;
@@ -82,7 +83,6 @@ public class enemyAttack {
         String unicodeRare = "\uD83D\uDC8D";
         String unicodeEnemyDead = "\uD83D\uDC80";
         String unicodeXp = "\uD83D\uDCDA";
-
 
         boolean enemyFight = true;
         while (enemyFight) {

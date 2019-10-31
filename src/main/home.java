@@ -46,27 +46,6 @@ public class home {
         int ionGunSpecial = 15;
         int nanoSuitSpecial = 30;
 
-        // Levels
-        // level names
-        String[] levels = {""};
-        int level = 1;
-        int xP1 = 250;
-        int xP2 = 750;
-        int xP3 = 1500;
-        int xP4 = 3000;
-        int xP5 = 5000;
-        int xP6 = 8000;
-        int xP7 = 12000;
-        int xP8 = 18000;
-        int xP9 = 24000;
-        int xP10 = 36000;
-
-/*
-        if (0 < xP && xP < 250) {
-            System.out.println("You are level 1");
-        }
-*/
-
         // UTF
         String unicodeMessageHP = "\uD83D\uDC96";
         String unicodeMessageMaxDamage = "\uD83D\uDD2B";

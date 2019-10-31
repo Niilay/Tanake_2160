@@ -16,28 +16,12 @@ public class bossAttack {
         // Boss action variables.
         String[] actions = {"needs to be stopped before everyone is killed!", "should be killed as fast as possible!", "will try to rip your flesh out!", "needs to be stopped before you are a sack of blood!", "should be killed with fire!"};
 
+        // Environment
         int day = stats.getDay();
-
-        int xP = stats.getXP();
-        int maxXpBoss = 500;
-
-        // Levels
-        // level names
-        String[] levels = {""};
-
-        int lvl1 = 250;
-        int lvl2 = 750;
-        int lvl3 = 1500;
-        int lvl4 = 3000;
-        int lvl5 = 5000;
-        int lvl6 = 8000;
-        int lvl7 = 12000;
-        int lvl8 = 18000;
-        int lvl9 = 24000;
-        int lvl10 = 36000;
 
         // Player variables.
         int health = stats.getHealth();
+        int xP = stats.getXP();
 
         // Weapon variables.
         int baseGunMaxDamage = stats.getBaseGunMaxDamage();
@@ -48,6 +32,7 @@ public class bossAttack {
         // Bosses.
         int maxBossHealth = 300;
         int maxBossAttack = 50;
+        int maxXpBoss = 500;
 
         int startMoney = stats.getstartMoney();
         int moneyDropBoss = 1000;

@@ -6,7 +6,6 @@ public class story {
         // System
         Scanner scanner = new Scanner(System.in);
 
-
         // Integers (mostly for game restart)
         int startMoney = stats.getstartMoney();
         int health = stats.getHealth();
@@ -21,6 +20,20 @@ public class story {
         int specialAmount = stats.getSpecialAmount();
         int enhancementLimbs = stats.getEnhancementLimbs();
 
+        // Levels
+        // level names
+        String[] levels = {"Bitch","Rookie","Pro","Badass","Badass MOFO"};
+        int level = 1;
+        int xP1 = 250; // Bitch
+        int xP2 = 750; // Bitch
+        int xP3 = 1500; // Rookie
+        int xP4 = 3000; // Rookie
+        int xP5 = 5000; // Pro
+        int xP6 = 8000; // Pro
+        int xP7 = 12000; // Badass
+        int xP8 = 18000; // Badass
+        int xP9 = 24000; // Badass MOFO
+        int xP10 = 36000; // Badass MOFO
 
         // Game restart
         if (health < 1) {
