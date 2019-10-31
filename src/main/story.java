@@ -95,7 +95,6 @@ public class story {
                         "\n---------------------------------------------------------------------------\n");
                 System.out.println("\t1. Yes\n\t2. No\t[Uses 1 escape try. You have: " + escapeAmount + "]");
 
-
                 boolean acceptQuest = true;
                 while (acceptQuest) {
                 String input = scanner.nextLine();
@@ -151,6 +150,7 @@ public class story {
                     System.out.println("Casper:\nDo you wish to go?\n1. yes\t2. no");
                     scanner.nextLine();
                 }
+
                 // [Chapter 01/02] If you did not acquire a Network Module for Casper.
                 else if (networkModule != 1) {
                     scanner.nextLine();
@@ -168,7 +168,6 @@ public class story {
                     boolean acceptQuest02 = true;
                     while (acceptQuest02) {
                         String input = scanner.nextLine();
-
 
                         if (input.equals("1")) {
                             System.out.println("--------------------------------------------------------------");
