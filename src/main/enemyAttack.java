@@ -116,7 +116,7 @@ public class enemyAttack {
                     System.out.println("\n\tWhat is your choice?");
                     System.out.println("\n\t1. Attack" + "\n\t2. Special Attack" + "\t[Left: " + specialAmount + "]" + "\n\t3. Outsmart them and run away" + "\t[Left: " + escapeAmount + "]" + "\n\t4. Use enhancement limb" + "\t[Left: " + enhancementLimbs + "]\n");
 
-                    // Fight! (common enemy) with choices: 1, 2, 3 or 4. ( (input.equals is a String function).
+                    // Fight! (common enemy) with choices: 1, 2, 3 or 4. ( (input.equals is a String function which in this case compares scanner input with the string).
                     String fightinput = scanner.nextLine();
 
                     // Normal attack......................................................................................................................................................
