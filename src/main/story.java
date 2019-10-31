@@ -65,7 +65,7 @@ public class story {
                         "\n----------------------------------------------\nPress enter again to initiate wake-up sequence\n----------------------------------------------");
 
                 scanner.nextLine();
-                System.out.println("Casper:\noi, oyh...?\nGood morning " + name + ". I see you are awake.. The weather outside seems chilly" +
+                System.out.println("Casper:\noi, oyh...?\nGood morning sir. I see you are awake.. The weather outside seems chilly" +
                         "\nand the reporter on the news talks about an incoming storm," +
                         "\nbut everything is in order for today's events..");
 
