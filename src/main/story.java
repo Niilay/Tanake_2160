@@ -60,7 +60,6 @@ public class story {
                 scanner.nextLine();
 
                 // [Prologue]
-                scanner.nextLine();
                 System.out.println("Transfer complete. [Casper] has been assigned as your virtual assistant.\nHe will guide you along the way and bring you valuable intel." +
                         "\n----------------------------------------------\nPress enter again to initiate wake-up sequence\n----------------------------------------------");
 
