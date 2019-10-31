@@ -63,11 +63,11 @@ public class story {
             stats.setEscapeAmount(escapeAmount);
         }
 
-        // Storyline
+        // Storyline (Switch statements with 'day' as variable allows for continuous play)
         switch (day) {
 
             case 1:
-                // If the player has bought a network module
+                // This is the first day
                 System.out.println("\nTanake Virtual instance initiated...");
                 System.out.println("\nPress [Enter] to transfer to Agent");
                 scanner.nextLine();
