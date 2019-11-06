@@ -13,6 +13,7 @@ class casino {
 
         // Unicode UTF-8 characters
         String unicodeMessageMoneyDrop = "\uD83D\uDCB0";
+        String unicodeMessageSuperRoll = "\uD83D\uDDF2";
 
         // Bet values
         int bet1 = 50;
@@ -31,15 +32,15 @@ class casino {
         boolean running = true;
         while (running) {
 
-            System.out.println("\nRules:\nYou get a random number between 1 - 100. House gets a random number between 50 - 100.\nWinner has the highest number.\nYou can win [2x - 5x] your bet. If your number is 95 or higher you get a Super Roll 30x\n");
+            System.out.println("\nRules:\nYou get a random number between 1 - 20. House gets a random number between 10 - 20.\nWinner has the highest number.\nYou can win [2x - 5x] your bet. If you win and your roll is 20 you acquire a Super Roll x10!\n");
             System.out.println("Cash: [" + startMoney + "$]\n");
             System.out.println("Choose your bet!");
             System.out.println("\n1. 50$ | 2. 100$ | 3. 250$ | 4. 500$ | 5. 1000$\n");
             System.out.println("type [exit] to go home.\n");
 
             // A bound is set for the random numbers. House roll between 50-100 and player roll between 1 - 100
-            int houseRoll = rand.nextInt(50) + 50;
-            int userRoll = rand.nextInt(99) + 1;
+            int houseRoll = rand.nextInt(11) + 10;
+            int userRoll = rand.nextInt(20) + 1;
 
             // Input for each round of play
             String input = scanner.nextLine();
@@ -76,10 +77,8 @@ class casino {
                             System.out.println("\nYou rolled: " + userRoll + "\nHouse rolled: " + houseRoll + "\n\nYou now have: [" + startMoney + "$]");
                             break;
 
-
                         // If the player rolls higher than the house and wins!
                         } else if (userRoll > houseRoll) {
-
                             startMoney += win;
                             stats.setStartMoney(startMoney);
                             System.out.println("Your roll was higher than the house and you win!");
@@ -87,21 +86,22 @@ class casino {
                             System.out.println(unicodeMessageMoneyDrop + " You won! [" + win + "$]");
                             System.out.println("------------------------------------------------");
                             System.out.println("\nYou rolled: " + userRoll + "\nHouse rolled: " + houseRoll + "\n\nYou now have: [" + startMoney + "$]");
-                            break;
 
-
-                        // Super-roll x30. If the player rolls 95 or higher
-                        } if (userRoll > 94) {
-
-                            int superRollwin = rand.nextInt(1500) + 500;
-                            startMoney += superRollwin;
-                            stats.setStartMoney(startMoney);
-                            System.out.println("------------------------------------------------");
-                            System.out.println("You unlocked a Super Roll x30!");
-                            System.out.println("------------------------------------------------");
-                            System.out.println("\nClick to roll!");
-                            scanner.nextLine();
-                            System.out.println("\nYou rolled: " + userRoll + "\nHouse rolled: " + houseRoll + "\n\nYou now have: [" + startMoney + "$]");
+                            // Super-roll x10. If the player rolls 20
+                            if (userRoll > 19) {
+                                int superRollwin = rand.nextInt(350) + 150;
+                                startMoney += superRollwin;
+                                stats.setStartMoney(startMoney);
+                                System.out.println("------------------------------------------------");
+                                System.out.println("You've unlocked a Super Roll x10!");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("\nClick to spin!");
+                                scanner.nextLine();
+                                System.out.println("------------------------------------------------");
+                                System.out.println(unicodeMessageSuperRoll + " Congratulations! The Super roll hit: [" + (superRollwin/bet1) + "x]");
+                                System.out.println(unicodeMessageMoneyDrop + " You've won: [" + superRollwin + "$]");
+                                System.out.println("------------------------------------------------");
+                        }
                             break;
 
                         // If the user rolls the same as the house nothing happens and it breaks back to the while loop
@@ -160,29 +160,29 @@ class casino {
                             System.out.println(unicodeMessageMoneyDrop + " You won! [" + win + "$]");
                             System.out.println("------------------------------------------------");
                             System.out.println("\nYou rolled: " + userRoll + "\nHouse rolled: " + houseRoll + "\n\nYou now have: [" + startMoney + "$]");
+
+                            // Super-roll x10. If the player rolls 20
+                            if (userRoll > 19) {
+                                int superRollwin = rand.nextInt(700) + 300;
+                                startMoney += superRollwin;
+                                stats.setStartMoney(startMoney);
+                                System.out.println("------------------------------------------------");
+                                System.out.println("You've unlocked a Super Roll x10!");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("\nClick to spin!");
+                                scanner.nextLine();
+                                System.out.println("------------------------------------------------");
+                                System.out.println(unicodeMessageSuperRoll + " Congratulations! The Super roll hit: [" + (superRollwin/bet2) + "x]");
+                                System.out.println(unicodeMessageMoneyDrop + " You've won: [" + superRollwin + "$]");
+                                System.out.println("------------------------------------------------");
+                            }
                             break;
 
-
-                        } else if (userRoll > 94) {
-                            rand.nextInt(houseRoll);
-                            rand.nextInt(userRoll);
-                            int superRollwin = rand.nextInt(1500) + 500;
-                            startMoney += superRollwin;
-                            stats.setStartMoney(startMoney);
-                            System.out.println("------------------------------------------------");
-                            System.out.println("You unlocked a Super Roll x30!");
-                            System.out.println("------------------------------------------------");
-                            System.out.println("\nClick to roll!");
-                            scanner.nextLine();
-                            System.out.println("\nYou rolled: " + userRoll + "\nHouse rolled: " + houseRoll + "\n\nYou now have: [" + startMoney + "$]");
-                            break;
-
-
+                            // If the user rolls the same as the house nothing happens and it breaks back to the while loop
                         } else if (userRoll == houseRoll) {
 
                             System.out.println("You rolled the same as the house\nYou rolled: " + userRoll + "\nHouse rolled: " + houseRoll + "\n\nYou now have: [" + startMoney + "$]");
                             break;
-
 
                         } else {
                             System.out.println("----------------------------------------------------------");
@@ -232,23 +232,23 @@ class casino {
                             System.out.println(unicodeMessageMoneyDrop + " You won! [" + win + "$]");
                             System.out.println("------------------------------------------------");
                             System.out.println("\nYou rolled: " + userRoll + "\nHouse rolled: " + houseRoll + "\n\nYou now have: [" + startMoney + "$]");
+
+                            // Super-roll x10. If the player rolls 20
+                            if (userRoll > 19) {
+                                int superRollwin = rand.nextInt(1500) + 1000;
+                                startMoney += superRollwin;
+                                stats.setStartMoney(startMoney);
+                                System.out.println("------------------------------------------------");
+                                System.out.println("You've unlocked a Super Roll x10!");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("\nClick to spin!");
+                                scanner.nextLine();
+                                System.out.println("------------------------------------------------");
+                                System.out.println(unicodeMessageSuperRoll + " Congratulations! The Super roll hit: [" + (superRollwin/bet3) + "x]");
+                                System.out.println(unicodeMessageMoneyDrop + " You've won: [" + superRollwin + "$]");
+                                System.out.println("------------------------------------------------");
+                            }
                             break;
-
-
-                        } else if (userRoll > 94) {
-                            rand.nextInt(houseRoll);
-                            rand.nextInt(userRoll);
-                            int superRollwin = rand.nextInt(1500) + 500;
-                            startMoney += superRollwin;
-                            stats.setStartMoney(startMoney);
-                            System.out.println("------------------------------------------------");
-                            System.out.println("You unlocked a Super Roll x30!");
-                            System.out.println("------------------------------------------------");
-                            System.out.println("\nClick to roll!");
-                            scanner.nextLine();
-                            System.out.println("\nYou rolled: " + userRoll + "\nHouse rolled: " + houseRoll + "\n\nYou now have: [" + startMoney + "$]");
-                            break;
-
 
                         } else if (userRoll == houseRoll) {
 
@@ -303,23 +303,23 @@ class casino {
                             System.out.println(unicodeMessageMoneyDrop + " You won! [" + win + "$]");
                             System.out.println("------------------------------------------------");
                             System.out.println("\nYou rolled: " + userRoll + "\nHouse rolled: " + houseRoll + "\n\nYou now have: [" + startMoney + "$]");
+
+                            // Super-roll x10. If the player rolls 20
+                            if (userRoll > 19) {
+                                int superRollwin = rand.nextInt(3000) + 2000;
+                                startMoney += superRollwin;
+                                stats.setStartMoney(startMoney);
+                                System.out.println("------------------------------------------------");
+                                System.out.println("You've unlocked a Super Roll x10!");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("\nClick to spin!");
+                                scanner.nextLine();
+                                System.out.println("------------------------------------------------");
+                                System.out.println(unicodeMessageSuperRoll + " Congratulations! The Super roll hit: [" + (superRollwin/bet4) + "x]");
+                                System.out.println(unicodeMessageMoneyDrop + " You've won: [" + superRollwin + "$]");
+                                System.out.println("------------------------------------------------");
+                            }
                             break;
-
-
-                        } else if (userRoll > 94) {
-                            rand.nextInt(houseRoll);
-                            rand.nextInt(userRoll);
-                            int superRollwin = rand.nextInt(1500) + 500;
-                            startMoney += superRollwin;
-                            stats.setStartMoney(startMoney);
-                            System.out.println("------------------------------------------------");
-                            System.out.println("You unlocked a Super Roll x30!");
-                            System.out.println("------------------------------------------------");
-                            System.out.println("\nClick to roll!");
-                            scanner.nextLine();
-                            System.out.println("\nYou rolled: " + userRoll + "\nHouse rolled: " + houseRoll + "\n\nYou now have: [" + startMoney + "$]");
-                            break;
-
 
                         } else if (userRoll == houseRoll) {
 
@@ -374,23 +374,24 @@ class casino {
                             System.out.println(unicodeMessageMoneyDrop + " You won! [" + win + "$]");
                             System.out.println("------------------------------------------------");
                             System.out.println("\nYou rolled: " + userRoll + "\nHouse rolled: " + houseRoll + "\n\nYou now have: [" + startMoney + "$]");
+
+
+                            // Super-roll x10. If the player rolls 20
+                            if (userRoll > 19) {
+                                int superRollwin = rand.nextInt(6000) + 4000;
+                                startMoney += superRollwin;
+                                stats.setStartMoney(startMoney);
+                                System.out.println("------------------------------------------------");
+                                System.out.println("You've unlocked a Super Roll x10!");
+                                System.out.println("------------------------------------------------");
+                                System.out.println("\nClick to spin!");
+                                scanner.nextLine();
+                                System.out.println("------------------------------------------------");
+                                System.out.println(unicodeMessageSuperRoll + " Congratulations! The Super roll hit: [" + (superRollwin/bet5) + "x]");
+                                System.out.println(unicodeMessageMoneyDrop + " You've won: [" + superRollwin + "$]");
+                                System.out.println("------------------------------------------------");
+                            }
                             break;
-
-
-                        } else if (userRoll > 94) {
-                            rand.nextInt(houseRoll);
-                            rand.nextInt(userRoll);
-                            int superRollwin = rand.nextInt(1500) + 500;
-                            startMoney += superRollwin;
-                            stats.setStartMoney(startMoney);
-                            System.out.println("------------------------------------------------");
-                            System.out.println("You unlocked a Super Roll x30!");
-                            System.out.println("------------------------------------------------");
-                            System.out.println("\nClick to roll!");
-                            scanner.nextLine();
-                            System.out.println("\nYou rolled: " + userRoll + "\nHouse rolled: " + houseRoll + "\n\nYou now have: [" + startMoney + "$]");
-                            break;
-
 
                         } else if (userRoll == houseRoll) {
 
