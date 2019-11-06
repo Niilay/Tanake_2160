@@ -78,7 +78,7 @@ public class home {
                     "    | .|  _.|. |.  .||   '-__  | . |  |.  .||  . .|\n" +
                     "    |. | |.   .|.  .||  .  - | |. .|  |.  .||  . .|\n" +
                     "    | .|-'     ' ..          '-' . '--' .. ''   . |\n" +
-                    "''''''''''''''''''''''''''''''''''''''''''''''''''''''''");
+                    "'''''''''''''''''''''''''''''''''''''''''''''''''''''''");
 
             System.out.println("\nYou are home.");
             System.out.println("\n-------\ttype 'stats' when at home, for viewing stats." +
@@ -129,6 +129,12 @@ public class home {
                 day++;
                 stats.setDay(day);
                 health += homeHP;
+
+                // Check to see if health is higher than maxhealth
+                if (health > maxHealth) {
+                    health = maxHealth;
+                }
+
                 stats.setHealth(health);
                 System.out.println("--------------\n" + unicodeSunrise + "\tDay: " + day + "\n--------------" + "\nIt's a new day\nYou health has been replenished by: " + homeHP + " and is now: " + health + " HP");
 

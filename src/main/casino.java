@@ -92,6 +92,9 @@ class casino {
                                 int superRollwin = rand.nextInt(350) + 150;
                                 startMoney += superRollwin;
                                 stats.setStartMoney(startMoney);
+                                System.out.println(".---..-..-..---..---..---.  .---. .----..-.   .-.   \n" +
+                                                   " \\ \\ | || || |-'| |- | |-<  | |-< | || || |__ | |__ \n" +
+                                                   "`---'`----'`-'  `---'`-'`-' `-'`-'`----'`----'`----'");
                                 System.out.println("------------------------------------------------");
                                 System.out.println("You've unlocked a Super Roll x10!");
                                 System.out.println("------------------------------------------------");
@@ -166,6 +169,9 @@ class casino {
                                 int superRollwin = rand.nextInt(700) + 300;
                                 startMoney += superRollwin;
                                 stats.setStartMoney(startMoney);
+                                System.out.println(".---..-..-..---..---..---.  .---. .----..-.   .-.   \n" +
+                                                   " \\ \\ | || || |-'| |- | |-<  | |-< | || || |__ | |__ \n" +
+                                                   "`---'`----'`-'  `---'`-'`-' `-'`-'`----'`----'`----'");
                                 System.out.println("------------------------------------------------");
                                 System.out.println("You've unlocked a Super Roll x10!");
                                 System.out.println("------------------------------------------------");
@@ -238,6 +244,9 @@ class casino {
                                 int superRollwin = rand.nextInt(1500) + 1000;
                                 startMoney += superRollwin;
                                 stats.setStartMoney(startMoney);
+                                System.out.println(".---..-..-..---..---..---.  .---. .----..-.   .-.   \n" +
+                                                   " \\ \\ | || || |-'| |- | |-<  | |-< | || || |__ | |__ \n" +
+                                                   "`---'`----'`-'  `---'`-'`-' `-'`-'`----'`----'`----'");
                                 System.out.println("------------------------------------------------");
                                 System.out.println("You've unlocked a Super Roll x10!");
                                 System.out.println("------------------------------------------------");
@@ -309,6 +318,9 @@ class casino {
                                 int superRollwin = rand.nextInt(3000) + 2000;
                                 startMoney += superRollwin;
                                 stats.setStartMoney(startMoney);
+                                System.out.println(".---..-..-..---..---..---.  .---. .----..-.   .-.   \n" +
+                                                   " \\ \\ | || || |-'| |- | |-<  | |-< | || || |__ | |__ \n" +
+                                                   "`---'`----'`-'  `---'`-'`-' `-'`-'`----'`----'`----'");
                                 System.out.println("------------------------------------------------");
                                 System.out.println("You've unlocked a Super Roll x10!");
                                 System.out.println("------------------------------------------------");
@@ -381,6 +393,9 @@ class casino {
                                 int superRollwin = rand.nextInt(6000) + 4000;
                                 startMoney += superRollwin;
                                 stats.setStartMoney(startMoney);
+                                System.out.println(".---..-..-..---..---..---.  .---. .----..-.   .-.   \n" +
+                                                   " \\ \\ | || || |-'| |- | |-<  | |-< | || || |__ | |__ \n" +
+                                                   "`---'`----'`-'  `---'`-'`-' `-'`-'`----'`----'`----'");
                                 System.out.println("------------------------------------------------");
                                 System.out.println("You've unlocked a Super Roll x10!");
                                 System.out.println("------------------------------------------------");

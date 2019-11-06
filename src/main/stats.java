@@ -15,7 +15,7 @@ public class stats {
 
 
     // Player.
-    private static int health = 120;
+    private static int health = 125;
     private static int maxHealth = 160;
     private static int startMoney = 250;
     private static int xP = 0;

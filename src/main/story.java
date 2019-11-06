@@ -59,7 +59,7 @@ public class story {
 
                 // [Prologue]
                 System.out.println("Transfer complete. [Casper] has been assigned as your virtual assistant.\nHe will guide you along the way and bring you valuable intel." +
-                        "\n----------------------------------------------\nPress enter again to initiate wake-up sequence\n----------------------------------------------");
+                        "\n----------------------------------------\nPress enter to initiate wake-up sequence\n----------------------------------------");
 
                 scanner.nextLine();
                 System.out.println("Casper:\noi, oyh...?\nGood morning sir. I see you are awake.. The weather outside seems chilly" +
@@ -156,7 +156,7 @@ public class story {
 
                         if (input.equals("1")) {
                             System.out.println("--------------------------------------------------------------");
-                            System.out.println("A boss has been spotted!");
+                            System.out.println("                   A boss has been spotted!                   ");
                             System.out.println("--------------------------------------------------------------");
 
                             // boss attack (class)

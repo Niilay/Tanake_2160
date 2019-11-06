@@ -24,6 +24,7 @@ public class enemyAttack {
 
         // Player variables.
         int health = stats.getHealth();
+        int maxHealth = stats.getMaxHealth();
         int xP = stats.getXP();
 
         // Weapon variables.
@@ -337,13 +338,29 @@ public class enemyAttack {
                         // If you use an enhancement limb.......................................................................................................................................................
                     } else if (fightinput.equals("4")) {
                         if (enhancementLimbs > 0) {
-                            health += healthEnhanceAmount;
-                            enhancementLimbs--;
-                            stats.setEnhancementLimbs(enhancementLimbs);
-                            System.out.println("----------------------------------------------------------");
-                            System.out.println("You have used an Enhancement Limb, healing you " + healthEnhanceAmount + " HP");
-                            System.out.println("----------------------------------------------------------");
+                            // If you have less health than maxHealth
+                            if (health < maxHealth) {
+                                health += healthEnhanceAmount;
+                                // Check to see if health is higher than maxHealth and set to maxHealth if true
+                                if (health > maxHealth) {
+                                    health = maxHealth;
+                                }
+                                // Lose one enhancement limb by using one
+                                enhancementLimbs--;
+                                stats.setHealth(health);
+                                stats.setEnhancementLimbs(enhancementLimbs);
+                                System.out.println("----------------------------------------------------------");
+                                System.out.println("You have used an Enhancement Limb, healing you " + healthEnhanceAmount + " HP");
+                                System.out.println("----------------------------------------------------------");
 
+                                // If your max HP has been reached. 160 or more
+                            } else {
+                                System.out.println("----------------------------------------------------------");
+                                System.out.println("You have reached your max HP for your current rank!");
+                                System.out.println("----------------------------------------------------------");
+                            }
+
+                            // If you have no enhancement limbs
                         } else {
                             System.out.println("----------------------------------------------------------");
                             System.out.println("You have no enhancement limbs left.");
