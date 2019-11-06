@@ -32,13 +32,13 @@ class casino {
         boolean running = true;
         while (running) {
 
-            System.out.println("\nRules:\nYou get a random number between 1 - 20. House gets a random number between 10 - 20.\nWinner has the highest number.\nYou can win [2x - 5x] your bet. If you win and your roll is 20 you acquire a Super Roll x10!\n");
+            System.out.println("\nRules:\nYou get a random number between 1 - 20. House gets a random number between 10 - 20.\nWinner has the highest number.\nYou can win [2x - 5x] your bet. If you win and your roll is 20, you acquire a Super Roll x10!\n");
             System.out.println("Cash: [" + startMoney + "$]\n");
             System.out.println("Choose your bet!");
             System.out.println("\n1. 50$ | 2. 100$ | 3. 250$ | 4. 500$ | 5. 1000$\n");
             System.out.println("type [exit] to go home.\n");
 
-            // A bound is set for the random numbers. House roll between 50-100 and player roll between 1 - 100
+            // A bound is set for the random numbers. House roll between 10-20 and player roll between 1 - 20
             int houseRoll = rand.nextInt(11) + 10;
             int userRoll = rand.nextInt(20) + 1;
 
@@ -95,7 +95,7 @@ class casino {
                                 System.out.println("------------------------------------------------");
                                 System.out.println("You've unlocked a Super Roll x10!");
                                 System.out.println("------------------------------------------------");
-                                System.out.println("\nClick to spin!");
+                                System.out.println("\nPress [enter] to spin!");
                                 scanner.nextLine();
                                 System.out.println("------------------------------------------------");
                                 System.out.println(unicodeMessageSuperRoll + " Congratulations! The Super roll hit: [" + (superRollwin/bet1) + "x]");
@@ -169,7 +169,7 @@ class casino {
                                 System.out.println("------------------------------------------------");
                                 System.out.println("You've unlocked a Super Roll x10!");
                                 System.out.println("------------------------------------------------");
-                                System.out.println("\nClick to spin!");
+                                System.out.println("\nPress [enter] to spin!");
                                 scanner.nextLine();
                                 System.out.println("------------------------------------------------");
                                 System.out.println(unicodeMessageSuperRoll + " Congratulations! The Super roll hit: [" + (superRollwin/bet2) + "x]");
@@ -241,7 +241,7 @@ class casino {
                                 System.out.println("------------------------------------------------");
                                 System.out.println("You've unlocked a Super Roll x10!");
                                 System.out.println("------------------------------------------------");
-                                System.out.println("\nClick to spin!");
+                                System.out.println("\nPress [enter] to spin!");
                                 scanner.nextLine();
                                 System.out.println("------------------------------------------------");
                                 System.out.println(unicodeMessageSuperRoll + " Congratulations! The Super roll hit: [" + (superRollwin/bet3) + "x]");
@@ -312,7 +312,7 @@ class casino {
                                 System.out.println("------------------------------------------------");
                                 System.out.println("You've unlocked a Super Roll x10!");
                                 System.out.println("------------------------------------------------");
-                                System.out.println("\nClick to spin!");
+                                System.out.println("\nPress [enter] to spin!");
                                 scanner.nextLine();
                                 System.out.println("------------------------------------------------");
                                 System.out.println(unicodeMessageSuperRoll + " Congratulations! The Super roll hit: [" + (superRollwin/bet4) + "x]");
@@ -384,7 +384,7 @@ class casino {
                                 System.out.println("------------------------------------------------");
                                 System.out.println("You've unlocked a Super Roll x10!");
                                 System.out.println("------------------------------------------------");
-                                System.out.println("\nClick to spin!");
+                                System.out.println("\nPress [enter] to spin!");
                                 scanner.nextLine();
                                 System.out.println("------------------------------------------------");
                                 System.out.println(unicodeMessageSuperRoll + " Congratulations! The Super roll hit: [" + (superRollwin/bet5) + "x]");
@@ -394,10 +394,8 @@ class casino {
                             break;
 
                         } else if (userRoll == houseRoll) {
-
                             System.out.println("You rolled the same as the house\nYou rolled: " + userRoll + "\nHouse rolled: " + houseRoll + "\n\nYou now have: [" + startMoney + "$]");
                             break;
-
 
                         } else {
                             System.out.println("----------------------------------------------------------");
