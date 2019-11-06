@@ -16,6 +16,9 @@ public class enemyAttack {
         // Enemy action variables.
         String[] actions = {"beating up homeless people!", "selling drugs!", "stealing from citizens!", "breaking into an apartment!", "pushing citizens around!", "being too drunk and harassing people!", "smoking Violet in public!", "being cruel to a dog!", "being high and nude in public!", "setting fire to random birds!", "blotting himself in public!", "robbing a liqueur store!", "drug dealing to kids!", "using counterfeited dollars at Blits & Chips!"};
 
+        // Leveling system
+
+
         // Environment
         int day = stats.getDay();
 
@@ -116,7 +119,7 @@ public class enemyAttack {
                     System.out.println("\n\tWhat is your choice?");
                     System.out.println("\n\t1. Attack" + "\n\t2. Special Attack" + "\t[Left: " + specialAmount + "]" + "\n\t3. Outsmart them and run away" + "\t[Left: " + escapeAmount + "]" + "\n\t4. Use enhancement limb" + "\t[Left: " + enhancementLimbs + "]\n");
 
-                    // Fight! (common enemy) with choices: 1, 2, 3 or 4. ( (input.equals is a String function which in this case compares scanner input with the string).
+                    // Fight! (common enemy) with choices: 1, 2, 3 or 4. (input.equals is a String function which in this case compares the players input with the string).
                     String fightinput = scanner.nextLine();
 
                     // Normal attack......................................................................................................................................................
@@ -139,7 +142,7 @@ public class enemyAttack {
                             System.out.println("\t\t\nYou missed the enemy!\n");
                         }
 
-                        // If you die.
+                        // If you die
                         if (health < 1) {
                             System.out.println("\n" +
                                     "   ___  ___  ___  _   _  _  _  _   _   ___  ___  __  ||\n" +
@@ -153,7 +156,7 @@ public class enemyAttack {
                             goToStory.storyLine();
 
 
-                            // If the enemy dies.
+                            // If the enemy dies
                         } else if (enemyHealth < 1) {
 
                             // One new escape for each enemy defeated. Save them up or use them.
@@ -191,7 +194,7 @@ public class enemyAttack {
                             }
 
                             // Rare items
-                            // Exoskeleton drop chance (common enemy).
+                            // Exoskeleton drop chance (common enemy)
                             if (rand.nextInt(100) < exoskeletonChanceCommon) {
                                 exoskeleton++;
                                 baseGunMinDamage += exoskeletonBase;
@@ -232,7 +235,7 @@ public class enemyAttack {
                             System.out.println("----------------------------------------------------------");
                         }
 
-                        // If you die.
+                        // If you die
                         if (health < 1) {
                             System.out.println("\n" +
                                     "   ___  ___  ___  _   _  _  _  _   _   ___  ___  __  ||\n" +
@@ -246,13 +249,13 @@ public class enemyAttack {
                             goToStory.storyLine();
 
 
-                            // If the enemy dies.
+                            // If the enemy dies
                         } else if (enemyHealth < 1) {
                             System.out.println("----------------------------------------------------------");
                             System.out.println(unicodeEnemyDead + " You have defeated the " + enemy + "!");
                             System.out.println("----------------------------------------------------------");
 
-                            // One new escape for each enemy defeated. Save them up or use them.
+                            // One new escape for each enemy defeated. Save them up or use them
                             escapeAmount++;
                             stats.setEscapeAmount(escapeAmount);
 
@@ -265,7 +268,7 @@ public class enemyAttack {
                             System.out.println("----------------------------------------------------------");
 
 
-                            // Money drop drop chance.
+                            // Money drop drop chance
                             if (rand.nextInt(100) < moneyDropChance) {
                                 startMoney += moneyDropCommon;
                                 stats.setStartMoney(startMoney);
@@ -354,8 +357,7 @@ public class enemyAttack {
                     }
                 }
 
-                // If you do not choose to fight you skip a day.
-
+                // If you do not choose to fight you skip a day, you go home
             } else if (input.equals("2")) {
                 System.out.println("You go back home..");
                 home gohome = new home();

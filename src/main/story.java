@@ -20,22 +20,7 @@ public class story {
         int specialAmount = stats.getSpecialAmount();
         int enhancementLimbs = stats.getEnhancementLimbs();
 
-        // Levels
-        // level names
-        String[] levels = {"Bitch","Rookie","Pro","Badass","Badass MOFO"};
-        int level = 1;
-        int xP1 = 250; // Bitch
-        int xP2 = 750; // Bitch
-        int xP3 = 1500; // Rookie
-        int xP4 = 3000; // Rookie
-        int xP5 = 5000; // Pro
-        int xP6 = 8000; // Pro
-        int xP7 = 12000; // Badass
-        int xP8 = 18000; // Badass
-        int xP9 = 24000; // Badass MOFO
-        int xP10 = 36000; // Badass MOFO
-
-        // Game restart
+        // Game restart. This happens if you die while fighting an enemy or boss. (The enemyAttack class will exit to here, while int health is less than 1)
         if (health < 1) {
             startMoney = 250;
             stats.setStartMoney(startMoney);
@@ -63,7 +48,7 @@ public class story {
             stats.setEscapeAmount(escapeAmount);
         }
 
-        // Storyline (Switch statements with 'day' as variable allows for continuous play)
+        // Storyline - Switch statements with 'day' as variable. This integer value is set when 'sleep' is the String input from home class
         switch (day) {
 
             case 1:

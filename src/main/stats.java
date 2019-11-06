@@ -16,6 +16,7 @@ public class stats {
 
     // Player.
     private static int health = 120;
+    private static int maxHealth = 160;
     private static int startMoney = 250;
     private static int xP = 0;
 
@@ -27,6 +28,15 @@ public class stats {
 
     public static void setHealth(int health) {
         stats.health = health;
+    }
+
+
+    public static int getMaxHealth() {
+        return maxHealth;
+    }
+
+    public static void setMaxHealth(int maxHealth) {
+        stats.maxHealth = maxHealth;
     }
 
 

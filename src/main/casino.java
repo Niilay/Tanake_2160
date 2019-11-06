@@ -3,27 +3,31 @@ import java.util.Scanner;
 
 class casino {
     public void games() {
-        // System imports
 
         // System
         Scanner scanner = new Scanner(System.in);
         Random rand = new Random();
 
+        // Player cash
         int startMoney = stats.getstartMoney();
 
+        // Unicode UTF-8 characters
         String unicodeMessageMoneyDrop = "\uD83D\uDCB0";
 
+        // Bet values
         int bet1 = 50;
         int bet2 = 100;
         int bet3 = 250;
         int bet4 = 500;
         int bet5 = 1000;
 
+        // Art
         System.out.println("   __                     \n" +
                 "  /  )                    \n" +
                 " /     __.  _   o ____  __\n" +
                 "(__/  (_/|_/_)_<_/ / <_(_)");
 
+        // Casino loop (main game-loop)
         boolean running = true;
         while (running) {
 
@@ -33,10 +37,14 @@ class casino {
             System.out.println("\n1. 50$ | 2. 100$ | 3. 250$ | 4. 500$ | 5. 1000$\n");
             System.out.println("type [exit] to go home.\n");
 
+            // A bound is set for the random numbers. House roll between 50-100 and player roll between 1 - 100
             int houseRoll = rand.nextInt(50) + 50;
             int userRoll = rand.nextInt(99) + 1;
+
+            // Input for each round of play
             String input = scanner.nextLine();
 
+            // Exit to home class
             if (input.equals("exit")) {
                 home gohome = new home();
                 gohome.homeMethod();
@@ -44,16 +52,23 @@ class casino {
 
             // Bet 50$
             if (input.equals("1")) {
+
+                // Random numbers are generated for the house and player/user
                 rand.nextInt(houseRoll);
                 rand.nextInt(userRoll);
+
+                // A random number is set for win in between (150) + 100. Which in this context means 100 to 250$
                 int win = rand.nextInt(150) + 100;
 
+                // If you have enough startMoney, subtract bet x from startMoney
                 if (startMoney >= bet1) {
                     startMoney -= bet1;
                     stats.setStartMoney(startMoney);
 
+                    // (Game-loop). While you do not roll the same as the house, this loop will run
                     while (userRoll != houseRoll) {
 
+                        // If the player rolls lower than the house
                         if (userRoll < houseRoll) {
                             System.out.println("------------------------------------------------");
                             System.out.println("Your roll was lower than the house and you lose!");
@@ -61,6 +76,8 @@ class casino {
                             System.out.println("\nYou rolled: " + userRoll + "\nHouse rolled: " + houseRoll + "\n\nYou now have: [" + startMoney + "$]");
                             break;
 
+
+                        // If the player rolls higher than the house and wins!
                         } else if (userRoll > houseRoll) {
 
                             startMoney += win;
@@ -72,7 +89,9 @@ class casino {
                             System.out.println("\nYou rolled: " + userRoll + "\nHouse rolled: " + houseRoll + "\n\nYou now have: [" + startMoney + "$]");
                             break;
 
-                        } else if (userRoll > 94) {
+
+                        // Super-roll x30. If the player rolls 95 or higher
+                        } if (userRoll > 94) {
 
                             int superRollwin = rand.nextInt(1500) + 500;
                             startMoney += superRollwin;
@@ -85,12 +104,13 @@ class casino {
                             System.out.println("\nYou rolled: " + userRoll + "\nHouse rolled: " + houseRoll + "\n\nYou now have: [" + startMoney + "$]");
                             break;
 
+                        // If the user rolls the same as the house nothing happens and it breaks back to the while loop
                         } else if (userRoll == houseRoll) {
 
                             System.out.println("You rolled the same as the house\nYou rolled: " + userRoll + "\nHouse rolled: " + houseRoll + "\n\nYou now have: [" + startMoney + "$]");
                             break;
 
-
+                        // System failure check. Just for fun and debugging
                         } else {
                             System.out.println("----------------------------------------------------------");
                             System.out.println("System fail!");
@@ -98,19 +118,19 @@ class casino {
                         }
                     }
 
-
+                // If you do not have enough cash to bet the String input amount
                 } else if (startMoney < bet1) {
                     System.out.println("----------------------------------------------------------");
                     System.out.println("You do not have enough cash! You have: " + "[" + startMoney + "$]");
                     System.out.println("----------------------------------------------------------");
 
+                // Invalid command from String input
                 } else {
                     System.out.println("----------------------------------------------------------");
                     System.out.println("Invalid command");
                     System.out.println("----------------------------------------------------------");
                 }
             }
-
 
             // Bet 100$
             if (input.equals("2")) {
