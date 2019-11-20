@@ -18,8 +18,10 @@ public class shop {
 
         // Quest shop/inventory variables
         int networkModule = 0; // Storyline variable
-        int bruteForcer = 0;
-        int tazer = 0;
+
+        // Unused
+        // int bruteForcer = 0;
+        // int tazer = 0;
 
         // Shop price variables
         int enhancementLimbShopValue = 150;
