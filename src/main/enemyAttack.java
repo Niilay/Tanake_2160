@@ -16,12 +16,6 @@ public class enemyAttack {
         // Enemy action variables.
         String[] actions = {"beating up homeless people!", "selling drugs!", "stealing from citizens!", "breaking into an apartment!", "pushing citizens around!", "being too drunk and harassing people!", "smoking Violet in public!", "being cruel to a dog!", "being high and nude in public!", "setting fire to random birds!", "blotting himself in public!", "robbing a liqueur store!", "drug dealing to kids!", "using counterfeited dollars at Blits & Chips!"};
 
-        // Leveling system
-
-
-        // Environment
-        int day = stats.getDay();
-
         // Player variables.
         int health = stats.getHealth();
         int maxHealth = stats.getMaxHealth();

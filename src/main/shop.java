@@ -7,12 +7,9 @@ public class shop {
     public void shopMethod() {
 
         // System
-        Random rand = new Random();
         Scanner scanner = new Scanner(System.in);
 
         // Player variables
-        int day = stats.getDay();
-        int health = stats.getHealth();
         int startMoney = stats.getstartMoney();
 
         // Inventory variables
@@ -141,7 +138,6 @@ public class shop {
                 }
             }
 
-
             // Special Refill
             if (shopinput.equals("2")) {
 
@@ -173,7 +169,6 @@ public class shop {
                     System.out.println("----------------------------------------");
                 }
             }
-
 
             // Advanced Scope
             if (shopinput.equals("3")) {
@@ -219,7 +214,6 @@ public class shop {
                 }
             }
 
-
             // Special Upgrade
             if (shopinput.equals("4")) {
 
@@ -259,7 +253,6 @@ public class shop {
                     System.out.println("----------------------------------------");
                 }
             }
-
 
             // Iris-zoom
             if (shopinput.equals("5")) {
@@ -304,7 +297,6 @@ public class shop {
                     System.out.println("----------------------------------------");
                 }
             }
-
 
             // Iris Slow-Motion
             if (shopinput.equals("6")) {
