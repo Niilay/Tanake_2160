@@ -285,7 +285,7 @@ public class enemyAttack {
                             System.out.println("----------------------------------------------------------");
 
 
-                            // Money drop drop chance
+                            // Money drop chance
                             if (rand.nextInt(100) < moneyDropChance) {
                                 startMoney += moneyDropCommon;
                                 stats.setStartMoney(startMoney);
