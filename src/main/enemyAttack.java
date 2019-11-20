@@ -91,11 +91,12 @@ public class enemyAttack {
         boolean enemyFight = true;
         while (enemyFight) {
 
+            // Choice. Do you want to skip or proceed to fight crime?
             System.out.println("Do you wish to go and fight crime?");
             System.out.println("\n1. Yes. Let's do it!\t2. No. I rather go home.");
             String input = scanner.nextLine();
 
-            // Menu for attack options ( Common attack starts here )...................................................................................................................................................................................................................................
+            // Menu for attack options (Common attack starts here)...................................................................................................................................................................................................................................
             if (input.equals("1")) {
 
                 // Common enemy attack
@@ -124,8 +125,7 @@ public class enemyAttack {
                     String fightinput = scanner.nextLine();
 
                     // Normal attack......................................................................................................................................................
-                    // Range = (max - min)
-                    // Formula is rand.nextInt((max - min) + 1) + min
+                    // Range = (max - min) | Formula is rand.nextInt((max - min) + 1) + min
                     if (fightinput.equals("1")) {
                         int damageGiven = rand.nextInt((baseGunMaxDamage - baseGunMinDamage) + 1) + baseGunMinDamage;
                         int damageTaken = rand.nextInt(maxCommonAttack);
@@ -134,11 +134,13 @@ public class enemyAttack {
                         health -= damageTaken;
                         stats.setHealth(health);
 
+                        // How much damage is taken and given prints
                         System.out.println("----------------------------------------------------------");
                         System.out.println(unicodeMessageCommonAttack + " You hit the " + enemy + " for " + damageGiven + " HP!");
                         System.out.println(unicodeMessageCommonAttack + " The " + enemy + " hit you for " + damageTaken + " HP!");
                         System.out.println("----------------------------------------------------------");
 
+                        // If damage is less than minimum gun damage, you miss the enemy
                         if (damageGiven < baseGunMinDamage) {
                             System.out.println("\t\t\nYou missed the enemy!\n");
                         }
@@ -153,6 +155,8 @@ public class enemyAttack {
 
                             System.out.println("\t\t    Press [Enter] to start new game");
                             scanner.nextLine();
+
+                            // Go back to story (class) and because you have < 1 health, game will reset within that class
                             story goToStory = new story();
                             goToStory.storyLine();
 
@@ -163,6 +167,7 @@ public class enemyAttack {
                             // One new escape for each enemy defeated. Save them up or use them.
                             escapeAmount++;
 
+                            // You have defeated the enemy print
                             System.out.println("----------------------------------------------------------");
                             System.out.println(unicodeEnemyDead + " You have defeated the " + enemy + "!");
                             System.out.println("----------------------------------------------------------");
@@ -246,6 +251,8 @@ public class enemyAttack {
 
                             System.out.println("\t\t    Press [Enter] to start new game");
                             scanner.nextLine();
+
+                            // Go back to story (class) and because you have < 1 health, game will reset within that class
                             story goToStory = new story();
                             goToStory.storyLine();
 
@@ -296,6 +303,7 @@ public class enemyAttack {
                                 specialMinDamage += exoskeletonSpecial;
                                 specialMaxDamage += exoskeletonSpecial;
 
+                                // Set upgrade values in stats (class). Used as global variables with getters/setters
                                 stats.setBaseGunMinDamage(baseGunMinDamage);
                                 stats.setBaseGunMaxDamage(baseGunMaxDamage);
                                 stats.setSpecialMinDamage(specialMinDamage);
@@ -317,18 +325,22 @@ public class enemyAttack {
                             escapeAmount--;
                             stats.setEscapeAmount(escapeAmount);
 
+                            // You have a 50 % percent chance to run away from the enemy. This is if you succeed
                             if (rand.nextInt(100) < escapeChance) {
                                 System.out.println("---------------------------------------------------------------");
                                 System.out.println(unicodeRun + " You successfully ran away from the " + enemy + "!");
                                 System.out.println("---------------------------------------------------------------");
                                 break;
 
+
+                                // You have a 50 % percent chance to run away from the enemy. This is if you fail
                             } else {
                                 System.out.println("---------------------------------------------------------------");
                                 System.out.println(unicodeRun + " You could not run away from the " + enemy + "!");
                                 System.out.println("---------------------------------------------------------------");
                             }
 
+                            // You have no escape tries
                         } else {
                             System.out.println("---------------------------------------------------------------");
                             System.out.println("The " + enemy + " has you trapped!\nYou have: " + escapeAmount + " escape tries left.");

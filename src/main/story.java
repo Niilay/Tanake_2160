@@ -114,6 +114,7 @@ public class story {
                 break;
 
             case 2:
+
                 // [Chapter 01/01] If you have acquired a Network Module for Casper.
                 if (networkModule == 1) {
                     scanner.nextLine();
