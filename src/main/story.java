@@ -7,11 +7,11 @@ public class story {
         Scanner scanner = new Scanner(System.in);
 
         // Integers (mostly for game restart)
-        int startMoney = stats.getstartMoney();
         int health = stats.getHealth();
         int day = stats.getDay();
         int escapeAmount = stats.getEscapeAmount();
         int networkModule = stats.getNetworkModule();
+        int startMoney = stats.getstartMoney();
         int xP = stats.getXP();
         int baseGunMinDamage = stats.getBaseGunMinDamage();
         int baseGunMaxDamage = stats.getBaseGunMaxDamage();
