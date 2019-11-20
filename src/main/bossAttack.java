@@ -89,7 +89,7 @@ public class bossAttack {
         boolean enemyFight = true;
         while (enemyFight) {
 
-            System.out.println("Do you wish to go and fight crime?");
+            System.out.println("Do you wish to go and fight a boss?");
             System.out.println("\n1. Yes. Let's do it!\t2. No. I rather go home.");
             String input = scanner.nextLine();
 
@@ -151,6 +151,8 @@ public class bossAttack {
 
                             System.out.println("\t\t    Press [Enter] to start new game");
                             scanner.nextLine();
+
+                            // You go to home (class) and game resets in that class, because your health < 1
                             story goToStory = new story();
                             goToStory.storyLine();
 
@@ -232,7 +234,6 @@ public class bossAttack {
                         }
 
                         // If you die.
-                        // If you die.
                         if (health < 1) {
                             System.out.println("\n" +
                                     "   ___  ___  ___  _   _  _  _  _   _   ___  ___  __  ||\n" +
@@ -242,6 +243,8 @@ public class bossAttack {
 
                             System.out.println("\t\t    Press [Enter] to start new game");
                             scanner.nextLine();
+
+                            // You go to home (class) and game resets in that class, because your health < 1
                             story goToStory = new story();
                             goToStory.storyLine();
 
