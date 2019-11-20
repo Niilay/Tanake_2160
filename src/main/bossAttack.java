@@ -10,35 +10,40 @@ public class bossAttack {
         Random rand = new Random();
         Scanner scanner = new Scanner(System.in);
 
-        // Boss variables.
+        // Boss variables
         String[] bosses = {"Big Bertha", "Arthur (???)", "Alien nightmare goo", "Robots"};
 
-        // Boss action variables.
+        // Boss action variables
         String[] actions = {"needs to be stopped before everyone is killed!", "should be killed as fast as possible!", "will try to rip your flesh out!", "needs to be stopped before you are a sack of blood!", "should be killed with fire!"};
 
-        // Player variables.
+        // Player variables
         int health = stats.getHealth();
         int xP = stats.getXP();
 
-        // Weapon variables.
+        // Weapon variables
         int baseGunMaxDamage = stats.getBaseGunMaxDamage();
         int baseGunMinDamage = stats.getBaseGunMinDamage();
         int specialMinDamage = stats.getSpecialMinDamage();
         int specialMaxDamage = stats.getSpecialMaxDamage();
 
-        // Bosses.
+        // Bosses
         int maxBossHealth = 300;
         int maxBossAttack = 50;
         int maxXpBoss = 500;
 
+        // Cash drop
         int startMoney = stats.getstartMoney();
         int moneyDropBoss = 1000;
         int moneyDropChance = 80; // Percentage %
+
+        // Enhancement limb drop chance
         int enhanceDrop = 30; // Percentage %
+
+        // Escape chance
         int escapeChance = 50; // Percentage %
         int escapeAmount = stats.getEscapeAmount();
 
-        // Inventory variables.
+        // Inventory variables
         int specialAmount = stats.getSpecialAmount();
         int enhancementLimbs = stats.getEnhancementLimbs();
         int healthEnhanceAmount = 35;

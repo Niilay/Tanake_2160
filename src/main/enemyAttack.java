@@ -21,6 +21,9 @@ public class enemyAttack {
         int maxHealth = stats.getMaxHealth();
         int xP = stats.getXP();
 
+        // Player cash
+        int startMoney = stats.getstartMoney();
+
         // Weapon variables.
         int baseGunMinDamage = stats.getBaseGunMinDamage();
         int baseGunMaxDamage = stats.getBaseGunMaxDamage();
@@ -31,11 +34,17 @@ public class enemyAttack {
         int maxCommonAttack = 24;
         int maxXpCommon = 50;
 
-        int startMoney = stats.getstartMoney();
+        // Random amount money drop from common enemies. 50$ to 300$ and 80% chance for money drop
         int moneyDropCommon = rand.nextInt(250) + 50;
         int moneyDropChance = 80; // Percentage %
+
+        // Enhancement limb drop chance
         int enhanceDrop = 30; // Percentage %
+
+        // Chance to escape
         int escapeChance = 50; // Percentage %
+
+        // Amount of escapes
         int escapeAmount = stats.getEscapeAmount();
 
         // Inventory variables.
