@@ -29,7 +29,7 @@ public class home {
 
         // Leveling system
         int maxHealthAdd = 35;
-        String[] levels = {"Bitch", "Trainee", "Rookie", "Supervisor", "Pro", "Killer Machine", "Infamous", "Legendary", "Badass", "Badass MOFO"};
+        String[] levels = {"Beginner", "Trainee", "Rookie", "Supervisor", "Pro", "Killer Machine", "Infamous", "Legendary", "Badass", "Badass MOFO"};
         Integer[] xPs = {250, 750, 1500, 3000, 5000, 8000, 12000, 18000, 24000, 36000};
 
         // Rare items
