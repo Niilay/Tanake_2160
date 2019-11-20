@@ -46,7 +46,7 @@ public class enemyAttack {
         // Rare items
         int exoskeleton = 0;
 
-        // Unused
+        // Unused...........
         // int laserHat = 0;
         // int ionGun = 0;
         // int nanoSuit = 0;
@@ -55,7 +55,7 @@ public class enemyAttack {
         int exoskeletonBase = 5;
         int exoskeletonBaseMax = 5;
 
-        // Unused
+        // Unused................
         // int laserHatBase = 20;
         // int ionGunBase = 20;
         // int nanoSuitBase = 30;
@@ -63,7 +63,7 @@ public class enemyAttack {
         // specialMaxDamage
         int exoskeletonSpecial = 5;
 
-        // Unused
+        // Unused...................
         // int laserHatSpecial = 15;
         // int ionGunSpecial = 15;
         // int nanoSuitSpecial = 30;
@@ -71,7 +71,7 @@ public class enemyAttack {
         // Rare items - drop chance (from common enemies).
         int exoskeletonChanceCommon = 5; // Percentage %
 
-        // Unused
+        // Unused.......................................
         // int laserHatChanceCommon = 2; // Percentage %
         // int ionGunChanceCommon = 2; // Percentage %
         // int nanoSuitChanceCommon = 1; // Percentage %

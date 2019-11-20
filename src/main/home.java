@@ -35,7 +35,7 @@ public class home {
         // Rare items
         int exoskeleton = 0;
 
-        // Unused
+        // Unused...........
         // int laserHat = 0;
         // int ionGun = 0;
         // int nanoSuit = 0;
@@ -43,7 +43,7 @@ public class home {
         // baseGunMaxDamage
         int exoskeletonBase = 10;
 
-        // Unused
+        // Unused................
         // int laserHatBase = 20;
         // int ionGunBase = 20;
         // int nanoSuitBase = 30;
@@ -51,7 +51,7 @@ public class home {
         // specialMaxDamage
         int exoskeletonSpecial = 5;
 
-        // Unused
+        // Unused...................
         // int laserHatSpecial = 15;
         // int ionGunSpecial = 15;
         // int nanoSuitSpecial = 30;

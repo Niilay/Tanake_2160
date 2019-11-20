@@ -124,8 +124,10 @@ public class stats {
 
     // Quest shop/inventory variables.
     private static int networkModule = 0; // Storyline variable
-    private static int bruteForcer = 0;
-    private static int tazer = 0;
+
+    // Unused.............................
+    // private static int bruteForcer = 0;
+    // private static int tazer = 0;
 
     // Functions
     public static int getNetworkModule() {
