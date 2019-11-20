@@ -187,27 +187,42 @@ public class story {
                 }
                 break;
 
+            // Day 3
             case 3:
                 System.out.println("This day happens if day = 3\n");
                 break;
+
+            // Day 4
             case 4:
                 System.out.println("This day happens if day = 4\n");
                 break;
+
+            // Day 5
             case 5:
                 System.out.println("This day happens if day = 5\n");
                 break;
+
+            // Day 6
             case 6:
                 System.out.println("This day happens if day = 6\n");
                 break;
+
+            // Day 7
             case 7:
                 System.out.println("This day happens if day = 7\n");
                 break;
+
+            // Day 8
             case 8:
                 System.out.println("This day happens if day = 8\n");
                 break;
+
+            // Day 9
             case 9:
                 System.out.println("This day happens if day = 9\n");
                 break;
+
+            // Day 10
             case 10:
                 System.out.println("This day happens if day = 10\n");
                 break;
