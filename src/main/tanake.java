@@ -4,6 +4,13 @@ import java.util.Scanner;
 public class tanake {
     public static void main(String[] args) {
 
+        /*
+         * Notes:
+         * Unused elements are out-commented. Unicode characters does not work in JAR executable.
+         * Works properly as an imported project from GitHub in IntelliJ IDEA 2019. JAVA JDK 1.8 used for development with file encoding in the configuration set to UTF-8.
+         * Changing file encoding can be done in the bottom right corner of IntelliJ 2019
+        */
+
         // System
         Scanner scanner = new Scanner(System.in);
 

@@ -51,7 +51,9 @@ public class story {
         // Storyline - Switch statements with 'day' as variable. This integer value is set when 'sleep' is the String input from home class
         switch (day) {
 
+            // Day 1
             case 1:
+
                 // This is the first day
                 System.out.println("\nTanake Virtual instance initiated...");
                 System.out.println("\nPress [Enter] to transfer to Agent");
@@ -102,6 +104,8 @@ public class story {
 
                     } else if (input.equals("2")) {
                         System.out.println("\nYou choose to stay home..\n");
+
+                        // Go to home (class)
                         home gohome = new home();
                         gohome.homeMethod();
 
@@ -113,6 +117,8 @@ public class story {
                 }
                 break;
 
+
+                // Day 2
             case 2:
 
                 // [Chapter 01/01] If you have acquired a Network Module for Casper.
@@ -167,6 +173,8 @@ public class story {
                         } else if (input.equals("2")) {
                             escapeAmount--;
                             System.out.println("\nYou choose to stay home..\n");
+
+                            // Go to home (class)
                             home gohome = new home();
                             gohome.homeMethod();
 

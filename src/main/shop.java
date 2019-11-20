@@ -343,7 +343,7 @@ public class shop {
             }
         }
 
-        // If shop is exited the shop, it breaks to this class
+        // If shop is exited the shop, it breaks to here and goes to home (class)
         home gohome = new home();
         gohome.homeMethod();
 
