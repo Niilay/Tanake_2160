@@ -20,7 +20,7 @@ public class story {
         int specialAmount = stats.getSpecialAmount();
         int enhancementLimbs = stats.getEnhancementLimbs();
 
-        // Game restart. This happens if you die while fighting an enemy or boss. (The enemyAttack class will exit to here, when int health is less than 1)
+        // Game restart. This happens if you die while fighting an enemy or boss. (The enemyAttack class will exit to here, when int health < 1 and the player are terminated in that class)
         if (health < 1) {
             startMoney = 250;
             stats.setStartMoney(startMoney);
