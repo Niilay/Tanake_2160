@@ -14,7 +14,7 @@ public class enemyAttack {
         String[] enemies = {"Ice Dragon Tribe gangster", "Sanguine Vulture gangster", "Reapers gangster", "Fire Tigers gangster", "Wolves gangster", "Monkey Clan gangster", "Men Of The Night gangster", "Violet Snake Gang gangster", "Cobalt Rat Riders gangster", "Gold Coyotes gangster", "Grey Elephant Squad gangster", };
 
         // Enemy action variables.
-        String[] actions = {"beating up homeless people!", "selling drugs!", "stealing from citizens!", "breaking into an apartment!", "pushing citizens around!", "being too drunk and harassing people!", "smoking Violet in public!", "being cruel to a dog!", "being high and nude in public!", "setting fire to random birds!", "blotting himself in public!", "robbing a liqueur store!", "drug dealing to kids!", "using counterfeited dollars at Blits & Chips!"};
+        String[] actions = {"beating up homeless people!", "selling drugs!", "stealing from citizens!", "breaking into an apartment!", "pushing citizens around!", "being too drunk and harassing people!", "smoking Violet in public!", "being cruel to a dog!", "being high and nude in public!", "setting fire to random stuff!", "blotting himself in public!", "robbing a liqueur store!", "drug dealing to kids!", "using counterfeited dollars at Blits & Chips!"};
 
         // Player variables.
         int health = stats.getHealth();
