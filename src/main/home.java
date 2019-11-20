@@ -16,13 +16,13 @@ public class home {
         int startMoney = stats.getstartMoney();
         int homeHP = 100;
 
-        // Weapon variables.
+        // Weapon variables
         int baseGunMinDamage = stats.getBaseGunMinDamage();
         int baseGunMaxDamage = stats.getBaseGunMaxDamage();
         int specialMinDamage = stats.getSpecialMinDamage();
         int specialMaxDamage = stats.getSpecialMaxDamage();
 
-        // Inventory variables.
+        // Inventory variables
         int specialAmount = stats.getSpecialAmount();
         int enhancementLimbs = stats.getEnhancementLimbs();
         int escapeAmount = stats.getEscapeAmount();
@@ -113,7 +113,7 @@ public class home {
 
             } else if (homeinput.equals("shop")) {
 
-                // Shop (class)
+                // Go to shop (class)
                 shop goshop = new shop();
                 goshop.shopMethod();
 
@@ -133,7 +133,7 @@ public class home {
                 stats.setDay(day);
                 health += homeHP;
 
-                // Check to see if health is higher than maxhealth
+                // Check to see if health is higher than max health and adjusting health to max health
                 if (health > maxHealth) {
                     health = maxHealth;
                 }
@@ -141,7 +141,7 @@ public class home {
                 stats.setHealth(health);
                 System.out.println("--------------\n" + unicodeSunrise + "\tDay: " + day + "\n--------------" + "\nIt's a new day\nYou health has been replenished by: " + homeHP + " and is now: " + health + " HP");
 
-                // Leveling system ( Gets values from String and Integer arrays )
+                // Leveling system (Gets values from String and Integer arrays)
                 if(xP < xPs[0]) {
                     System.out.println("\nYour xP is: " + xP);
                     System.out.println("You have reached a rank of: " + levels[0]);
@@ -195,8 +195,9 @@ public class home {
 
                 stats.setMaxHealth(maxHealth);
 
-                    story goToStory = new story();
-                    goToStory.storyLine();
+                // Go to the story (class) after sleeping
+                story goToStory = new story();
+                goToStory.storyLine();
 
             } else {
                 System.out.println("----------------------------------------------------------");

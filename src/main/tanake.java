@@ -30,6 +30,7 @@ public class tanake {
                 "\nthese disturbances and try and maintain peace in the online city " +
                 "\nand do your best to save it from mysterious, maybe even cataclysmic events.");
 
+        // Go to story (class)
         story goToStory = new story();
         goToStory.storyLine();
 
