@@ -15,7 +15,7 @@ public class tanake {
         Scanner scanner = new Scanner(System.in);
 
         // Unicode UTF-8 symbols
-        String unicodeMessageHP = "\uD83D\uDC96";
+        String unicodeMadeWithLove = "\uD83D\uDC96";
 
         System.out.println("  ______                            __                  ___    ___   _____   ____ \n" +
                 " /_  __/  ____ _   ____   ____ _   / /__  ___          |__ \\  <  /  / ___/  / __ \\\n" +
@@ -26,7 +26,7 @@ public class tanake {
 
         System.out.println("                         Press [Enter] to start new game");
         scanner.nextLine();
-        System.out.println("Cyberpunk Micro-RPG developed with " + unicodeMessageHP + "\nby Nicklas Pedersen\n");
+        System.out.println("Cyberpunk Micro-RPG developed with " + unicodeMadeWithLove + "\nby Nicklas Pedersen\n");
         System.out.println("Introduction:" +
                 "\nThe year is 2160. You are a rogue, freelance detective for hire in the virtual" +
                 "\ncity of Tanake. A corporate network filled with greed, hostility and crime. " +
