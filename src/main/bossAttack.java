@@ -16,9 +16,6 @@ public class bossAttack {
         // Boss action variables.
         String[] actions = {"needs to be stopped before everyone is killed!", "should be killed as fast as possible!", "will try to rip your flesh out!", "needs to be stopped before you are a sack of blood!", "should be killed with fire!"};
 
-        // Environment
-        int day = stats.getDay();
-
         // Player variables.
         int health = stats.getHealth();
         int xP = stats.getXP();

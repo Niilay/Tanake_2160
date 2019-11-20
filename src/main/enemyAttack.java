@@ -45,28 +45,36 @@ public class enemyAttack {
 
         // Rare items
         int exoskeleton = 0;
-        int laserHat = 0;
-        int ionGun = 0;
-        int nanoSuit = 0;
+
+        // Unused
+        // int laserHat = 0;
+        // int ionGun = 0;
+        // int nanoSuit = 0;
 
         // baseGunMaxDamage
         int exoskeletonBase = 5;
         int exoskeletonBaseMax = 5;
-        int laserHatBase = 20;
-        int ionGunBase = 20;
-        int nanoSuitBase = 30;
+
+        // Unused
+        // int laserHatBase = 20;
+        // int ionGunBase = 20;
+        // int nanoSuitBase = 30;
 
         // specialMaxDamage
         int exoskeletonSpecial = 5;
-        int laserHatSpecial = 15;
-        int ionGunSpecial = 15;
-        int nanoSuitSpecial = 30;
+
+        // Unused
+        // int laserHatSpecial = 15;
+        // int ionGunSpecial = 15;
+        // int nanoSuitSpecial = 30;
 
         // Rare items - drop chance (from common enemies).
         int exoskeletonChanceCommon = 5; // Percentage %
-        int laserHatChanceCommon = 2; // Percentage %
-        int ionGunChanceCommon = 2; // Percentage %
-        int nanoSuitChanceCommon = 1; // Percentage %
+
+        // Unused
+        // int laserHatChanceCommon = 2; // Percentage %
+        // int ionGunChanceCommon = 2; // Percentage %
+        // int nanoSuitChanceCommon = 1; // Percentage %
 
         // Unicode UTF-8 symbols
         String unicodeMessageHP = "\uD83D\uDC96";
@@ -75,8 +83,6 @@ public class enemyAttack {
         String unicodeMessageSpecialAttack = "\uD83D\uDDF2";
         String unicodeMessageMoneyDrop = "\uD83D\uDCB0";
         String unicodeMessageItemDrop = "\uD83C\uDF82";
-        String unicodeSleep = "\uD83D\uDCA4";
-        String unicodeEnhance = "\uD83D\uDD74";
         String unicodeRun = "\uD83C\uDFC3";
         String unicodeRare = "\uD83D\uDC8D";
         String unicodeEnemyDead = "\uD83D\uDC80";

@@ -89,7 +89,7 @@ public class story {
                         scanner.nextLine();
                         System.out.println("The city is looking a bit vail compared to how it used to be..");
                         scanner.nextLine();
-                        System.out.println("That's what greed does to even the best of us I guess..");
+                        System.out.println("That's what greed does to people I guess..");
                         scanner.nextLine();
                         System.out.println("---------------------------------");
                         System.out.println("You hear someone scream for help!");
