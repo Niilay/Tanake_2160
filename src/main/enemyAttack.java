@@ -103,6 +103,8 @@ public class enemyAttack {
             // Choice. Do you want to skip or proceed to fight crime?
             System.out.println("Do you wish to go and fight crime?");
             System.out.println("\n1. Yes. Let's do it!\t2. No. I rather go home.");
+
+            // Choice menu input
             String input = scanner.nextLine();
 
             // Menu for attack options (Common attack starts here)...................................................................................................................................................................................................................................
