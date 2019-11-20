@@ -129,6 +129,7 @@ public class home {
 
             } else if (homeinput.equals("sleep")) {
 
+                // A day is added from sleeping. This makes the storyline proceed in the story (class)
                 day++;
                 stats.setDay(day);
                 health += homeHP;
