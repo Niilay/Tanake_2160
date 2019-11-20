@@ -108,7 +108,6 @@ public class shop {
             // Enhancement limb
             if (shopinput.equals("1")) {
 
-
                 // If you have enough cash and have not reached maximum inventory value
                 if (startMoney >= enhancementLimbShopValue) {
 
